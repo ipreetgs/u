@@ -58,6 +58,14 @@
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.05); }
         }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
     </style>
 </head>
 <body class="font-sans antialiased bg-gray-100">
@@ -67,7 +75,7 @@
             <ul class="flex space-x-4">
                 <li><a href="#home" class="hover:text-gray-300">Home</a></li>
                 <li><a href="#recommendations" class="hover:text-gray-300">Recommendations</a></li>
-                <li><a href="#about" class="hover:text-gray-300">About</a></li>
+                <li><a href="#tabs" class="hover:text-gray-300">Profile</a></li>
                 <li><a href="#cv" class="hover:text-gray-300">CV</a></li>
             </ul>
         </nav>
@@ -112,26 +120,48 @@
             </div>
         </div>
     </section>
-    
-    <section id="about" class="container mx-auto my-12 p-8 bg-white rounded-lg shadow-lg">
-        <h2 class="text-3xl font-bold text-center mb-8 slide-in-left">About</h2>
-        <p class="pulse">DevOps Engineer with over 2.5 years of experience in designing and implementing CI/CD pipelines, automating infrastructure, and leading cloud migration projects. Proficient in Python, Ansible, Terraform, and Kubernetes. Strong background in network security and penetration testing. Recognized for excellent troubleshooting, multitasking, and communication skills.</p>
-        <h3 class="text-2xl font-bold mt-8 slide-in-left">Experience</h3>
-        <ul class="list-disc pl-5 pulse">
-            <li>DevOps Engineer (SE) at TestingXperts, Chandigarh (2022-PRESENT)</li>
-            <li>Network Security and VAPT Trainee (intern) at EH1 Infotech, Chandigarh (JUN/2018-AUG/2018)</li>
-        </ul>
-        <h3 class="text-2xl font-bold mt-8 slide-in-left">Projects</h3>
-        <ul class="list-disc pl-5 pulse">
-            <li>Deluxe Corporation (IAC DevOps Engineer)</li>
-            <li>Net Number Migrations — Project Lead (TestingXperts)</li>
-            <li>IACT— Tx Internal (TestingXperts)</li>
-            <li>Observability and Chaos Mesh— TX Internal (TestingXperts)</li>
-        </ul>
-        <h3 class="text-2xl font-bold mt-8 slide-in-left">Skills</h3>
-        <p class="pulse">AWS, Azure, GCP, Linux, Azure DevOps, Jenkins, SonarQube, Ansible, Chef, Terraform, Git, SVN, Docker, Kubernetes, Nexus, Python, Shell Scripting, Cybersecurity, VAPT, Nessus, OWASP ZAP, GFI Lan Guard, Nmap, Metasploit, OSINT, Burpsuite, Chaos Mesh, Grafana, AppDynamics, Datadog, Splunk</p>
-        <h3 class="text-2xl font-bold mt-8 slide-in-left">Education</h3>
-        <p class="pulse">B. Tech (CSE) from Shaheed Bhagat Singh State Tech. Uni. (SBSSTU), Firozpur (2017-2021)</p>
+
+    <section id="tabs" class="container mx-auto my-12 p-8 bg-white rounded-lg shadow-lg">
+        <h2 class="text-3xl font-bold text-center mb-8 slide-in-left">Profile</h2>
+        <div class="flex justify-center mb-8">
+            <button class="tab-btn bg-blue-500 text-white py-2 px-4 rounded-l hover:bg-blue-700 transition duration-300" data-tab="about">About</button>
+            <button class="tab-btn bg-blue-500 text-white py-2 px-4 hover:bg-blue-700 transition duration-300" data-tab="experience">Experience</button>
+            <button class="tab-btn bg-blue-500 text-white py-2 px-4 hover:bg-blue-700 transition duration-300" data-tab="projects">Projects</button>
+            <button class="tab-btn bg-blue-500 text-white py-2 px-4 hover:bg-blue-700 transition duration-300" data-tab="skills">Skills</button>
+            <button class="tab-btn bg-blue-500 text-white py-2 px-4 rounded-r hover:bg-blue-700 transition duration-300" data-tab="education">Education</button>
+        </div>
+
+        <div id="about" class="tab-content active fade-in">
+            <p>DevOps Engineer with over 2.5 years of experience in designing and implementing CI/CD pipelines, automating infrastructure, and leading cloud migration projects. Proficient in Python, Ansible, Terraform, and Kubernetes. Strong background in network security and penetration testing. Recognized for excellent troubleshooting, multitasking, and communication skills.</p>
+        </div>
+        
+        <div id="experience" class="tab-content fade-in">
+            <h3 class="text-2xl font-bold mt-8">Experience</h3>
+            <ul class="list-disc pl-5">
+                <li>DevOps Engineer (SE) at TestingXperts, Chandigarh (2022-PRESENT)</li>
+                <li>Network Security and VAPT Trainee (intern) at EH1 Infotech, Chandigarh (JUN/2018-AUG/2018)</li>
+            </ul>
+        </div>
+
+        <div id="projects" class="tab-content fade-in">
+            <h3 class="text-2xl font-bold mt-8">Projects</h3>
+            <ul class="list-disc pl-5">
+                <li>Deluxe Corporation (IAC DevOps Engineer)</li>
+                <li>Net Number Migrations — Project Lead (TestingXperts)</li>
+                <li>IACT— Tx Internal (TestingXperts)</li>
+                <li>Observability and Chaos Mesh— TX Internal (TestingXperts)</li>
+            </ul>
+        </div>
+
+        <div id="skills" class="tab-content fade-in">
+            <h3 class="text-2xl font-bold mt-8">Skills</h3>
+            <p>AWS, Azure, GCP, Linux, Azure DevOps, Jenkins, SonarQube, Ansible, Chef, Terraform, Git, SVN, Docker, Kubernetes, Nexus, Python, Shell Scripting, Cybersecurity, VAPT, Nessus, OWASP ZAP, GFI Lan Guard, Nmap, Metasploit, OSINT, Burpsuite, Chaos Mesh, Grafana, AppDynamics, Datadog, Splunk</p>
+        </div>
+
+        <div id="education" class="tab-content fade-in">
+            <h3 class="text-2xl font-bold mt-8">Education</h3>
+            <p>B. Tech (CSE) from Shaheed Bhagat Singh State Tech. Uni. (SBSSTU), Firozpur (2017-2021)</p>
+        </div>
     </section>
     
     <section id="cv" class="container mx-auto my-12 p-8 bg-white rounded-lg shadow-lg text-center">
@@ -142,5 +172,28 @@
     <footer class="bg-gray-900 text-white text-center py-4">
         <p>&copy; 2024 Gurpreet Singh. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const tab = this.dataset.tab;
+
+                    tabButtons.forEach(btn => btn.classList.remove('bg-blue-700'));
+                    this.classList.add('bg-blue-700');
+
+                    tabContents.forEach(content => {
+                        content.classList.remove('active');
+                        if (content.id === tab) {
+                            content.classList.add('active');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
