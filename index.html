@@ -73,6 +73,16 @@
             0% { background-position: 0 0; }
             100% { background-position: 100% 100%; }
         }
+
+        /* Wiggle animation */
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(-3deg); }
+            50% { transform: rotate(3deg); }
+        }
+
+        .wiggle {
+            animation: wiggle 0.5s ease-in-out;
+        }
     </style>
 </head>
 <body class="font-sans antialiased bg-gray-100 pattern-bg">
@@ -242,19 +252,6 @@
                 }, 500);
             }
         });
-
-        // Wiggle animation
-        const style = document.createElement('style');
-        style.innerHTML = `
-            @keyframes wiggle {
-                0%, 100% { transform: rotate(-3deg); }
-                50% { transform: rotate(3deg); }
-            }
-            .wiggle {
-                animation: wiggle 0.5s ease-in-out;
-            }
-        `;
-        document.head.appendChild(style);
     </script>
 </body>
 </html>
