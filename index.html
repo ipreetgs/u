@@ -63,41 +63,19 @@
             50% { transform: scale(1.05); }
         }
 
-        /* Background pattern */
-        .pattern-bg {
-            background: url('https://www.transparenttextures.com/patterns/cubes.png');
-            animation: movePattern 10s linear infinite;
+        /* Zig-zag atomic structure background */
+        .zigzag-bg {
+            background: linear-gradient(135deg, #ffd700 25%, transparent 25%) -50px 0/100px 100px,
+                        linear-gradient(225deg, #ffd700 25%, transparent 25%) -50px 0/100px 100px,
+                        linear-gradient(315deg, #ffd700 25%, transparent 25%) 0px 0/100px 100px,
+                        linear-gradient(45deg, #ffd700 25%, transparent 25%) 0px 0/100px 100px,
+                        #000;
+            animation: moveZigZag 5s linear infinite;
         }
 
-        @keyframes movePattern {
+        @keyframes moveZigZag {
             0% { background-position: 0 0; }
-            100% { background-position: 100% 100%; }
-        }
-
-        /* Wiggle animation */
-        @keyframes wiggle {
-            0%, 100% { transform: rotate(-3deg); }
-            50% { transform: rotate(3deg); }
-        }
-
-        .wiggle {
-            animation: wiggle 0.5s ease-in-out;
-        }
-
-        .bg-shift {
-            transition: background 0.5s ease-in-out;
-        }
-
-        /* Continuous moving line-type background */
-        .line-bg {
-            background: linear-gradient(135deg, #6b8e23 25%, #8b4513 25%, #8b4513 50%, #6b8e23 50%, #6b8e23 75%, #8b4513 75%, #8b4513);
-            background-size: 56.57px 56.57px;
-            animation: moveLines 2s linear infinite;
-        }
-
-        @keyframes moveLines {
-            0% { background-position: 0 0; }
-            100% { background-position: 56.57px 56.57px; }
+            100% { background-position: 100px 100px; }
         }
 
         /* Stylish tabs */
@@ -125,9 +103,22 @@
         .security-bg {
             background: url('https://www.transparenttextures.com/patterns/brushed-alum.png');
         }
+
+        .skills-tab {
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+            border-radius: 0.5rem;
+            padding: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .skills-tab:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
     </style>
 </head>
-<body class="font-sans antialiased bg-gray-100 pattern-bg bg-shift line-bg">
+<body class="font-sans antialiased bg-gray-100 pattern-bg bg-shift zigzag-bg">
     <header class="bg-gray-900 text-white shadow-md fixed w-full z-10 top-0">
         <nav class="container mx-auto p-4 flex justify-between items-center">
             <div class="text-lg font-bold">Gurpreet Singh</div>
@@ -203,8 +194,8 @@
             </div>
             <div>
                 <h2 class="text-4xl font-bold text-center mb-8 slide-in-left">Skills</h2>
-                <div class="flex flex-wrap">
-                    <div class="w-full p-4">
+                <div class="grid grid-cols-1 gap-4">
+                    <div class="skills-tab">
                         <ul class="list-disc pl-5 text-lg leading-relaxed">
                             <li>AWS Cloud</li>
                             <li>Azure and Dev Azure</li>
@@ -214,7 +205,7 @@
                             <li>Ansible, Chef, Terraform/Terragrunt</li>
                         </ul>
                     </div>
-                    <div class="w-full p-4">
+                    <div class="skills-tab">
                         <ul class="list-disc pl-5 text-lg leading-relaxed">
                             <li>Git, SVN</li>
                             <li>Docker</li>
