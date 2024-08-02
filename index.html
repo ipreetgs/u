@@ -62,9 +62,20 @@
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.05); }
         }
+
+        /* Background pattern */
+        .pattern-bg {
+            background: url('https://www.transparenttextures.com/patterns/cubes.png');
+            animation: movePattern 10s linear infinite;
+        }
+
+        @keyframes movePattern {
+            0% { background-position: 0 0; }
+            100% { background-position: 100% 100%; }
+        }
     </style>
 </head>
-<body class="font-sans antialiased bg-gray-100">
+<body class="font-sans antialiased bg-gray-100 pattern-bg">
     <header class="bg-gray-900 text-white shadow-md fixed w-full z-10 top-0">
         <nav class="container mx-auto p-4 flex justify-between items-center">
             <div class="text-lg font-bold">Gurpreet Singh</div>
@@ -213,5 +224,37 @@
     <footer class="bg-gray-900 text-white text-center py-4">
         <p>&copy; 2024 Gurpreet Singh. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Interactive background effect
+        document.body.addEventListener('mousemove', (e) => {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            document.body.style.backgroundPosition = `${x * 100}% ${y * 100}%`;
+        });
+
+        // Wiggle effect on click
+        document.body.addEventListener('click', (e) => {
+            if (e.target === document.body) {
+                document.body.classList.add('wiggle');
+                setTimeout(() => {
+                    document.body.classList.remove('wiggle');
+                }, 500);
+            }
+        });
+
+        // Wiggle animation
+        const style = document.createElement('style');
+        style.innerHTML = `
+            @keyframes wiggle {
+                0%, 100% { transform: rotate(-3deg); }
+                50% { transform: rotate(3deg); }
+            }
+            .wiggle {
+                animation: wiggle 0.5s ease-in-out;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
 </body>
 </html>
