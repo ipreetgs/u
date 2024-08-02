@@ -62,14 +62,6 @@
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.05); }
         }
-
-        .tab-content {
-            display: none;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
     </style>
 </head>
 <body class="font-sans antialiased bg-gray-100">
@@ -100,40 +92,85 @@
     </section>
     
     <section id="about" class="container mx-auto my-12 p-8 bg-white rounded-lg shadow-lg fade-in">
-        <h2 class="text-3xl font-bold text-center mb-8 slide-in-left">About</h2>
-        <p>DevOps Engineer with over 2.5 years of experience in designing and implementing CI/CD pipelines, automating infrastructure, and leading cloud migration projects. Proficient in Python, Ansible, Terraform, and Kubernetes. Strong background in network security and penetration testing. Recognized for excellent troubleshooting, multitasking, and communication skills.</p>
+        <h2 class="text-4xl font-bold text-center mb-8 slide-in-left">About</h2>
+        <div class="flex flex-wrap">
+            <div class="w-full md:w-1/2 p-4">
+                <img src="pic.jpg" alt="Gurpreet Singh" class="w-full rounded-lg shadow-md">
+            </div>
+            <div class="w-full md:w-1/2 p-4">
+                <p class="text-lg leading-relaxed">DevOps Engineer with over 2.5 years of experience in designing and implementing CI/CD pipelines, automating infrastructure, and leading cloud migration projects. Proficient in Python, Ansible, Terraform, and Kubernetes. Strong background in network security and penetration testing. Recognized for excellent troubleshooting, multitasking, and communication skills.</p>
+            </div>
+        </div>
     </section>
     
     <section id="experience" class="container mx-auto my-12 p-8 bg-white rounded-lg shadow-lg fade-in">
-        <h2 class="text-3xl font-bold text-center mb-8 slide-in-left">Experience</h2>
-        <ul class="list-disc pl-5 pulse">
-            <li>DevOps Engineer (SE) at TestingXperts, Chandigarh (2022-PRESENT)</li>
-            <li>Network Security and VAPT Trainee (intern) at EH1 Infotech, Chandigarh (JUN/2018-AUG/2018)</li>
-        </ul>
+        <h2 class="text-4xl font-bold text-center mb-8 slide-in-left">Experience</h2>
+        <div class="space-y-6">
+            <div class="p-6 bg-gray-100 rounded-lg shadow-sm slide-in-right">
+                <h3 class="text-2xl font-bold mb-2">DevOps Engineer (SE) at TestingXperts</h3>
+                <p class="text-lg">Chandigarh (2022-PRESENT)</p>
+            </div>
+            <div class="p-6 bg-gray-100 rounded-lg shadow-sm slide-in-right">
+                <h3 class="text-2xl font-bold mb-2">Network Security and VAPT Trainee (intern) at EH1 Infotech</h3>
+                <p class="text-lg">Chandigarh (JUN/2018-AUG/2018)</p>
+            </div>
+        </div>
     </section>
 
     <section id="projects" class="container mx-auto my-12 p-8 bg-white rounded-lg shadow-lg fade-in">
-        <h2 class="text-3xl font-bold text-center mb-8 slide-in-left">Projects</h2>
-        <ul class="list-disc pl-5 pulse">
-            <li>Deluxe Corporation (IAC DevOps Engineer)</li>
-            <li>Net Number Migrations — Project Lead (TestingXperts)</li>
-            <li>IACT— Tx Internal (TestingXperts)</li>
-            <li>Observability and Chaos Mesh— TX Internal (TestingXperts)</li>
-        </ul>
+        <h2 class="text-4xl font-bold text-center mb-8 slide-in-left">Projects</h2>
+        <div class="space-y-6">
+            <div class="p-6 bg-gray-100 rounded-lg shadow-sm slide-in-right">
+                <h3 class="text-2xl font-bold mb-2">Deluxe Corporation (IAC DevOps Engineer)</h3>
+                <p class="text-lg">Details about the project.</p>
+            </div>
+            <div class="p-6 bg-gray-100 rounded-lg shadow-sm slide-in-right">
+                <h3 class="text-2xl font-bold mb-2">Net Number Migrations — Project Lead (TestingXperts)</h3>
+                <p class="text-lg">Details about the project.</p>
+            </div>
+            <div class="p-6 bg-gray-100 rounded-lg shadow-sm slide-in-right">
+                <h3 class="text-2xl font-bold mb-2">IACT— Tx Internal (TestingXperts)</h3>
+                <p class="text-lg">Details about the project.</p>
+            </div>
+            <div class="p-6 bg-gray-100 rounded-lg shadow-sm slide-in-right">
+                <h3 class="text-2xl font-bold mb-2">Observability and Chaos Mesh— TX Internal (TestingXperts)</h3>
+                <p class="text-lg">Details about the project.</p>
+            </div>
+        </div>
     </section>
 
     <section id="skills" class="container mx-auto my-12 p-8 bg-white rounded-lg shadow-lg fade-in">
-        <h2 class="text-3xl font-bold text-center mb-8 slide-in-left">Skills</h2>
-        <p class="pulse">AWS, Azure, GCP, Linux, Azure DevOps, Jenkins, SonarQube, Ansible, Chef, Terraform, Git, SVN, Docker, Kubernetes, Nexus, Python, Shell Scripting, Cybersecurity, VAPT, Nessus, OWASP ZAP, GFI Lan Guard, Nmap, Metasploit, OSINT, Burpsuite, Chaos Mesh, Grafana, AppDynamics, Datadog, Splunk</p>
+        <h2 class="text-4xl font-bold text-center mb-8 slide-in-left">Skills</h2>
+        <div class="flex flex-wrap">
+            <div class="w-full md:w-1/2 p-4">
+                <ul class="list-disc pl-5 text-lg leading-relaxed">
+                    <li>AWS, Azure, GCP</li>
+                    <li>Linux, Azure DevOps</li>
+                    <li>Jenkins, SonarQube</li>
+                    <li>Ansible, Chef, Terraform</li>
+                </ul>
+            </div>
+            <div class="w-full md:w-1/2 p-4">
+                <ul class="list-disc pl-5 text-lg leading-relaxed">
+                    <li>Git, SVN, Docker</li>
+                    <li>Kubernetes, Nexus</li>
+                    <li>Python, Shell Scripting</li>
+                    <li>Cybersecurity, VAPT</li>
+                </ul>
+            </div>
+        </div>
     </section>
 
     <section id="education" class="container mx-auto my-12 p-8 bg-white rounded-lg shadow-lg fade-in">
-        <h2 class="text-3xl font-bold text-center mb-8 slide-in-left">Education</h2>
-        <p class="pulse">B. Tech (CSE) from Shaheed Bhagat Singh State Tech. Uni. (SBSSTU), Firozpur (2017-2021)</p>
+        <h2 class="text-4xl font-bold text-center mb-8 slide-in-left">Education</h2>
+        <div class="p-6 bg-gray-100 rounded-lg shadow-sm slide-in-right">
+            <h3 class="text-2xl font-bold mb-2">B. Tech (CSE) from Shaheed Bhagat Singh State Tech. Uni. (SBSSTU)</h3>
+            <p class="text-lg">Firozpur (2017-2021)</p>
+        </div>
     </section>
 
     <section id="recommendations" class="recommendations-bg animated-bg text-white my-12 p-8 fade-in">
-        <h2 class="text-3xl font-bold text-center mb-8 slide-in-left">Recommendations</h2>
+        <h2 class="text-4xl font-bold text-center mb-8 slide-in-left">Recommendations</h2>
         <div class="container mx-auto space-y-6">
             <div class="p-4 bg-gray-800 rounded-lg shadow-sm slide-in-right">
                 <p><strong>Manisha Verma</strong> - Software Engineer at TestingXperts</p>
@@ -163,35 +200,12 @@
     </section>
     
     <section id="cv" class="container mx-auto my-12 p-8 bg-white rounded-lg shadow-lg text-center fade-in">
-        <h2 class="text-3xl font-bold mb-8 slide-in-left">Download CV</h2>
+        <h2 class="text-4xl font-bold mb-8 slide-in-left">Download CV</h2>
         <a href="gurpreetcv.pdf" download class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300 slide-in-right">Click here to download my CV</a>
     </section>
 
     <footer class="bg-gray-900 text-white text-center py-4">
         <p>&copy; 2024 Gurpreet Singh. All rights reserved.</p>
     </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const tabButtons = document.querySelectorAll('.tab-btn');
-            const tabContents = document.querySelectorAll('.tab-content');
-
-            tabButtons.forEach(button => {
-                button.addEventListener('click', function () {
-                    const tab = this.dataset.tab;
-
-                    tabButtons.forEach(btn => btn.classList.remove('bg-blue-700'));
-                    this.classList.add('bg-blue-700');
-
-                    tabContents.forEach(content => {
-                        content.classList.remove('active');
-                        if (content.id === tab) {
-                            content.classList.add('active');
-                        }
-                    });
-                });
-            });
-        });
-    </script>
 </body>
 </html>
