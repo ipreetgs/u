@@ -22,10 +22,46 @@
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
+
+        .fade-in {
+            animation: fadeIn 2s ease-in;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .slide-in-left {
+            animation: slideInLeft 1s ease-out;
+        }
+
+        @keyframes slideInLeft {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(0); }
+        }
+
+        .slide-in-right {
+            animation: slideInRight 1s ease-out;
+        }
+
+        @keyframes slideInRight {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(0); }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
     </style>
 </head>
 <body class="font-sans antialiased bg-gray-100">
-    <header class="bg-gray-900 text-white">
+    <header class="bg-gray-900 text-white shadow-md fixed w-full z-10 top-0">
         <nav class="container mx-auto p-4 flex justify-between items-center">
             <div class="text-lg font-bold">Gurpreet Singh</div>
             <ul class="flex space-x-4">
@@ -38,39 +74,39 @@
     </header>
     
     <section id="home" class="hero-bg animated-bg text-white h-screen flex items-center justify-center">
-        <div class="text-center">
+        <div class="text-center fade-in">
             <img src="pic.jpg" alt="Gurpreet Singh" class="w-32 h-32 rounded-full mx-auto mb-4">
-            <h1 class="text-4xl font-bold mb-2">Gurpreet Singh</h1>
-            <p class="text-xl">DevOps | Ethical Hacking & VAPT | Digital Forensics | Python | OSINT</p>
+            <h1 class="text-5xl font-bold mb-2">Gurpreet Singh</h1>
+            <p class="text-2xl">DevOps | Ethical Hacking & VAPT | Digital Forensics | Python | OSINT</p>
             <p>TestingXperts, Firozpur, India</p>
             <p>Contact info: <a href="https://igli.me/ipreetgs" target="_blank" class="underline">igli.me/ipreetgs</a></p>
         </div>
     </section>
     
     <section id="recommendations" class="container mx-auto my-12 p-8 bg-white rounded-lg shadow-lg">
-        <h2 class="text-3xl font-bold text-center mb-8">Recommendations</h2>
+        <h2 class="text-3xl font-bold text-center mb-8 slide-in-left">Recommendations</h2>
         <div class="space-y-6">
-            <div class="p-4 bg-gray-100 rounded-lg shadow-sm">
+            <div class="p-4 bg-gray-100 rounded-lg shadow-sm slide-in-right">
                 <p><strong>Manisha Verma</strong> - Software Engineer at TestingXperts</p>
                 <p>A hardworking person with demonstrated outstanding technical abilities in cloud and DevOps. Their technical acumen, problem-solving skills, and ability to mentor others set them apart. Gurpreet is a true asset to any team looking to enhance their operational capabilities.</p>
             </div>
-            <div class="p-4 bg-gray-100 rounded-lg shadow-sm">
+            <div class="p-4 bg-gray-100 rounded-lg shadow-sm slide-in-right">
                 <p><strong>Priti Ranga</strong> - DevOps Engineer</p>
                 <p>Gurpreet is an exceptional DevOps Engineer who streamlined our CI/CD processes, managed Azure IaaS, and optimized infrastructure with Terraform. Their technical expertise, problem-solving skills, and proactive approach greatly contributed to our team's success. Highly recommended!</p>
             </div>
-            <div class="p-4 bg-gray-100 rounded-lg shadow-sm">
+            <div class="p-4 bg-gray-100 rounded-lg shadow-sm slide-in-right">
                 <p><strong>Mayur Prabhat</strong> - DevSecOps Engineer at Axis Bank</p>
                 <p>A hard working person with high skills and excellent knowledge in DevOps and development.</p>
             </div>
-            <div class="p-4 bg-gray-100 rounded-lg shadow-sm">
+            <div class="p-4 bg-gray-100 rounded-lg shadow-sm slide-in-right">
                 <p><strong>Navjit Kaur</strong> - Software Engineer</p>
                 <p>Gurpreet has consistently demonstrated exceptional technical expertise in DevOps practices, streamlining our workflows and improving our software quality. He is a proactive learner who keeps our team updated on industry best practices, a strong communicator who fosters collaboration, and a reliable, deadline-oriented professional. Gurpreet's dedication and skills make him an asset to any organization.</p>
             </div>
-            <div class="p-4 bg-gray-100 rounded-lg shadow-sm">
+            <div class="p-4 bg-gray-100 rounded-lg shadow-sm slide-in-right">
                 <p><strong>Gurwinder Singh</strong> - Student at Conestoga College</p>
                 <p>Gurpreet Singh is working hard as a DevOps engineer and he is always eager to work and learn new skills.</p>
             </div>
-            <div class="p-4 bg-gray-100 rounded-lg shadow-sm">
+            <div class="p-4 bg-gray-100 rounded-lg shadow-sm slide-in-right">
                 <p><strong>Inder Preet Singh</strong> - Associate Tech Lead - Penetration Tester at Trantor</p>
                 <p>Gurpreet is a motivated, hard-working, and intelligent person who is an expert in his area.</p>
             </div>
@@ -78,29 +114,29 @@
     </section>
     
     <section id="about" class="container mx-auto my-12 p-8 bg-white rounded-lg shadow-lg">
-        <h2 class="text-3xl font-bold text-center mb-8">About</h2>
-        <p>DevOps Engineer with over 2.5 years of experience in designing and implementing CI/CD pipelines, automating infrastructure, and leading cloud migration projects. Proficient in Python, Ansible, Terraform, and Kubernetes. Strong background in network security and penetration testing. Recognized for excellent troubleshooting, multitasking, and communication skills.</p>
-        <h3 class="text-2xl font-bold mt-8">Experience</h3>
-        <ul class="list-disc pl-5">
+        <h2 class="text-3xl font-bold text-center mb-8 slide-in-left">About</h2>
+        <p class="pulse">DevOps Engineer with over 2.5 years of experience in designing and implementing CI/CD pipelines, automating infrastructure, and leading cloud migration projects. Proficient in Python, Ansible, Terraform, and Kubernetes. Strong background in network security and penetration testing. Recognized for excellent troubleshooting, multitasking, and communication skills.</p>
+        <h3 class="text-2xl font-bold mt-8 slide-in-left">Experience</h3>
+        <ul class="list-disc pl-5 pulse">
             <li>DevOps Engineer (SE) at TestingXperts, Chandigarh (2022-PRESENT)</li>
             <li>Network Security and VAPT Trainee (intern) at EH1 Infotech, Chandigarh (JUN/2018-AUG/2018)</li>
         </ul>
-        <h3 class="text-2xl font-bold mt-8">Projects</h3>
-        <ul class="list-disc pl-5">
+        <h3 class="text-2xl font-bold mt-8 slide-in-left">Projects</h3>
+        <ul class="list-disc pl-5 pulse">
             <li>Deluxe Corporation (IAC DevOps Engineer)</li>
             <li>Net Number Migrations — Project Lead (TestingXperts)</li>
             <li>IACT— Tx Internal (TestingXperts)</li>
             <li>Observability and Chaos Mesh— TX Internal (TestingXperts)</li>
         </ul>
-        <h3 class="text-2xl font-bold mt-8">Skills</h3>
-        <p>AWS, Azure, GCP, Linux, Azure DevOps, Jenkins, SonarQube, Ansible, Chef, Terraform, Git, SVN, Docker, Kubernetes, Nexus, Python, Shell Scripting, Cybersecurity, VAPT, Nessus, OWASP ZAP, GFI Lan Guard, Nmap, Metasploit, OSINT, Burpsuite, Chaos Mesh, Grafana, AppDynamics, Datadog, Splunk</p>
-        <h3 class="text-2xl font-bold mt-8">Education</h3>
-        <p>B. Tech (CSE) from Shaheed Bhagat Singh State Tech. Uni. (SBSSTU), Firozpur (2017-2021)</p>
+        <h3 class="text-2xl font-bold mt-8 slide-in-left">Skills</h3>
+        <p class="pulse">AWS, Azure, GCP, Linux, Azure DevOps, Jenkins, SonarQube, Ansible, Chef, Terraform, Git, SVN, Docker, Kubernetes, Nexus, Python, Shell Scripting, Cybersecurity, VAPT, Nessus, OWASP ZAP, GFI Lan Guard, Nmap, Metasploit, OSINT, Burpsuite, Chaos Mesh, Grafana, AppDynamics, Datadog, Splunk</p>
+        <h3 class="text-2xl font-bold mt-8 slide-in-left">Education</h3>
+        <p class="pulse">B. Tech (CSE) from Shaheed Bhagat Singh State Tech. Uni. (SBSSTU), Firozpur (2017-2021)</p>
     </section>
     
     <section id="cv" class="container mx-auto my-12 p-8 bg-white rounded-lg shadow-lg text-center">
-        <h2 class="text-3xl font-bold mb-8">Download CV</h2>
-        <a href="gurpreetcv.pdf" download class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300">Click here to download my CV</a>
+        <h2 class="text-3xl font-bold mb-8 slide-in-left">Download CV</h2>
+        <a href="gurpreetcv.pdf" download class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300 slide-in-right">Click here to download my CV</a>
     </section>
 
     <footer class="bg-gray-900 text-white text-center py-4">
