@@ -87,19 +87,57 @@
         .bg-shift {
             transition: background 0.5s ease-in-out;
         }
+
+        /* Continuous moving line-type background */
+        .line-bg {
+            background: linear-gradient(135deg, #6b8e23 25%, #8b4513 25%, #8b4513 50%, #6b8e23 50%, #6b8e23 75%, #8b4513 75%, #8b4513);
+            background-size: 56.57px 56.57px;
+            animation: moveLines 2s linear infinite;
+        }
+
+        @keyframes moveLines {
+            0% { background-position: 0 0; }
+            100% { background-position: 56.57px 56.57px; }
+        }
+
+        /* Stylish tabs */
+        .nav-tab {
+            border: 2px solid #667eea;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .nav-tab:hover {
+            background-color: #667eea;
+            color: #ffffff;
+        }
+
+        /* Background change on hover */
+        .tech-bg {
+            background: url('https://www.transparenttextures.com/patterns/asfalt-light.png');
+        }
+
+        .devops-bg {
+            background: url('https://www.transparenttextures.com/patterns/cubes.png');
+        }
+
+        .security-bg {
+            background: url('https://www.transparenttextures.com/patterns/brushed-alum.png');
+        }
     </style>
 </head>
-<body class="font-sans antialiased bg-gray-100 pattern-bg bg-shift">
+<body class="font-sans antialiased bg-gray-100 pattern-bg bg-shift line-bg">
     <header class="bg-gray-900 text-white shadow-md fixed w-full z-10 top-0">
         <nav class="container mx-auto p-4 flex justify-between items-center">
             <div class="text-lg font-bold">Gurpreet Singh</div>
             <ul class="flex space-x-4">
-                <li><a href="#home" class="hover:text-gray-300">Home</a></li>
-                <li><a href="#about" class="hover:text-gray-300">About</a></li>
-                <li><a href="#experience" class="hover:text-gray-300">Experience</a></li>
-                <li><a href="#projects-skills" class="hover:text-gray-300">Projects & Skills</a></li>
-                <li><a href="#education-cv" class="hover:text-gray-300">Education & CV</a></li>
-                <li><a href="#recommendations" class="hover:text-gray-300">Recommendations</a></li>
+                <li><a href="#home" class="hover:text-gray-300 nav-tab">Home</a></li>
+                <li><a href="#about" class="hover:text-gray-300 nav-tab">About</a></li>
+                <li><a href="#experience" class="hover:text-gray-300 nav-tab">Experience</a></li>
+                <li><a href="#projects-skills" class="hover:text-gray-300 nav-tab">Projects & Skills</a></li>
+                <li><a href="#education-cv" class="hover:text-gray-300 nav-tab">Education & CV</a></li>
+                <li><a href="#recommendations" class="hover:text-gray-300 nav-tab">Recommendations</a></li>
             </ul>
         </nav>
     </header>
@@ -267,6 +305,21 @@
                 const rect = section.getBoundingClientRect();
                 if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
                     document.body.style.background = `linear-gradient(135deg, #${Math.floor(Math.random()*16777215).toString(16)} 0%, #${Math.floor(Math.random()*16777215).toString(16)} 100%)`;
+                }
+            });
+        });
+
+        // Change background on tab hover
+        document.querySelectorAll('.nav-tab').forEach(tab => {
+            tab.addEventListener('mouseenter', () => {
+                if (tab.textContent.includes('Home')) {
+                    document.body.className = 'font-sans antialiased tech-bg';
+                } else if (tab.textContent.includes('About')) {
+                    document.body.className = 'font-sans antialiased devops-bg';
+                } else if (tab.textContent.includes('Experience')) {
+                    document.body.className = 'font-sans antialiased security-bg';
+                } else {
+                    document.body.className = 'font-sans antialiased line-bg';
                 }
             });
         });
