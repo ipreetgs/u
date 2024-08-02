@@ -4,84 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gurpreet Singh - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="icon" href="pic.jpg" type="image/x-icon">
+    <style>
+        /* Additional custom styles */
+        .hero-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .animated-bg {
+            animation: gradient 5s ease infinite;
+            background-size: 400% 400%;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#recommendations">Recommendations</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#cv">CV</a></li>
+<body class="font-sans antialiased bg-gray-100">
+    <header class="bg-gray-900 text-white">
+        <nav class="container mx-auto p-4 flex justify-between items-center">
+            <div class="text-lg font-bold">Gurpreet Singh</div>
+            <ul class="flex space-x-4">
+                <li><a href="#home" class="hover:text-gray-300">Home</a></li>
+                <li><a href="#recommendations" class="hover:text-gray-300">Recommendations</a></li>
+                <li><a href="#about" class="hover:text-gray-300">About</a></li>
+                <li><a href="#cv" class="hover:text-gray-300">CV</a></li>
             </ul>
         </nav>
     </header>
     
-    <section id="home">
-        <div class="intro">
-            <h1>Gurpreet Singh</h1>
-            <p>DevOps | Ethical Hacking & VAPT | Digital Forensics | Python | OSINT</p>
+    <section id="home" class="hero-bg animated-bg text-white h-screen flex items-center justify-center">
+        <div class="text-center">
+            <img src="pic.jpg" alt="Gurpreet Singh" class="w-32 h-32 rounded-full mx-auto mb-4">
+            <h1 class="text-4xl font-bold mb-2">Gurpreet Singh</h1>
+            <p class="text-xl">DevOps | Ethical Hacking & VAPT | Digital Forensics | Python | OSINT</p>
             <p>TestingXperts, Firozpur, India</p>
-            <p>Contact info: <a href="https://igli.me/ipreetgs" target="_blank">igli.me/ipreetgs</a></p>
+            <p>Contact info: <a href="https://igli.me/ipreetgs" target="_blank" class="underline">igli.me/ipreetgs</a></p>
         </div>
     </section>
     
-    <section id="recommendations">
-        <h2>Recommendations</h2>
-        <div class="recommendation">
-            <p><strong>Manisha Verma</strong> - Software Engineer at TestingXperts</p>
-            <p>A hardworking person with demonstrated outstanding technical abilities in cloud and DevOps. Their technical acumen, problem-solving skills, and ability to mentor others set them apart. Gurpreet is a true asset to any team looking to enhance their operational capabilities.</p>
-        </div>
-        <div class="recommendation">
-            <p><strong>Priti Ranga</strong> - DevOps Engineer</p>
-            <p>Gurpreet is an exceptional DevOps Engineer who streamlined our CI/CD processes, managed Azure IaaS, and optimized infrastructure with Terraform. Their technical expertise, problem-solving skills, and proactive approach greatly contributed to our team's success. Highly recommended!</p>
-        </div>
-        <div class="recommendation">
-            <p><strong>Mayur Prabhat</strong> - DevSecOps Engineer at Axis Bank</p>
-            <p>A hard working person with high skills and excellent knowledge in DevOps and development.</p>
-        </div>
-        <div class="recommendation">
-            <p><strong>Navjit Kaur</strong> - Software Engineer</p>
-            <p>Gurpreet has consistently demonstrated exceptional technical expertise in DevOps practices, streamlining our workflows and improving our software quality. He is a proactive learner who keeps our team updated on industry best practices, a strong communicator who fosters collaboration, and a reliable, deadline-oriented professional. Gurpreet's dedication and skills make him an asset to any organization.</p>
-        </div>
-        <div class="recommendation">
-            <p><strong>Gurwinder Singh</strong> - Student at Conestoga College</p>
-            <p>Gurpreet Singh is working hard as a DevOps engineer and he is always eager to work and learn new skills.</p>
-        </div>
-        <div class="recommendation">
-            <p><strong>Inder Preet Singh</strong> - Associate Tech Lead - Penetration Tester at Trantor</p>
-            <p>Gurpreet is a motivated, hard-working, and intelligent person who is an expert in his area.</p>
+    <section id="recommendations" class="container mx-auto my-12 p-8 bg-white rounded-lg shadow-lg">
+        <h2 class="text-3xl font-bold text-center mb-8">Recommendations</h2>
+        <div class="space-y-6">
+            <div class="p-4 bg-gray-100 rounded-lg shadow-sm">
+                <p><strong>Manisha Verma</strong> - Software Engineer at TestingXperts</p>
+                <p>A hardworking person with demonstrated outstanding technical abilities in cloud and DevOps. Their technical acumen, problem-solving skills, and ability to mentor others set them apart. Gurpreet is a true asset to any team looking to enhance their operational capabilities.</p>
+            </div>
+            <div class="p-4 bg-gray-100 rounded-lg shadow-sm">
+                <p><strong>Priti Ranga</strong> - DevOps Engineer</p>
+                <p>Gurpreet is an exceptional DevOps Engineer who streamlined our CI/CD processes, managed Azure IaaS, and optimized infrastructure with Terraform. Their technical expertise, problem-solving skills, and proactive approach greatly contributed to our team's success. Highly recommended!</p>
+            </div>
+            <div class="p-4 bg-gray-100 rounded-lg shadow-sm">
+                <p><strong>Mayur Prabhat</strong> - DevSecOps Engineer at Axis Bank</p>
+                <p>A hard working person with high skills and excellent knowledge in DevOps and development.</p>
+            </div>
+            <div class="p-4 bg-gray-100 rounded-lg shadow-sm">
+                <p><strong>Navjit Kaur</strong> - Software Engineer</p>
+                <p>Gurpreet has consistently demonstrated exceptional technical expertise in DevOps practices, streamlining our workflows and improving our software quality. He is a proactive learner who keeps our team updated on industry best practices, a strong communicator who fosters collaboration, and a reliable, deadline-oriented professional. Gurpreet's dedication and skills make him an asset to any organization.</p>
+            </div>
+            <div class="p-4 bg-gray-100 rounded-lg shadow-sm">
+                <p><strong>Gurwinder Singh</strong> - Student at Conestoga College</p>
+                <p>Gurpreet Singh is working hard as a DevOps engineer and he is always eager to work and learn new skills.</p>
+            </div>
+            <div class="p-4 bg-gray-100 rounded-lg shadow-sm">
+                <p><strong>Inder Preet Singh</strong> - Associate Tech Lead - Penetration Tester at Trantor</p>
+                <p>Gurpreet is a motivated, hard-working, and intelligent person who is an expert in his area.</p>
+            </div>
         </div>
     </section>
     
-    <section id="about">
-        <h2>About</h2>
+    <section id="about" class="container mx-auto my-12 p-8 bg-white rounded-lg shadow-lg">
+        <h2 class="text-3xl font-bold text-center mb-8">About</h2>
         <p>DevOps Engineer with over 2.5 years of experience in designing and implementing CI/CD pipelines, automating infrastructure, and leading cloud migration projects. Proficient in Python, Ansible, Terraform, and Kubernetes. Strong background in network security and penetration testing. Recognized for excellent troubleshooting, multitasking, and communication skills.</p>
-        <h3>Experience</h3>
-        <ul>
+        <h3 class="text-2xl font-bold mt-8">Experience</h3>
+        <ul class="list-disc pl-5">
             <li>DevOps Engineer (SE) at TestingXperts, Chandigarh (2022-PRESENT)</li>
             <li>Network Security and VAPT Trainee (intern) at EH1 Infotech, Chandigarh (JUN/2018-AUG/2018)</li>
         </ul>
-        <h3>Projects</h3>
-        <ul>
+        <h3 class="text-2xl font-bold mt-8">Projects</h3>
+        <ul class="list-disc pl-5">
             <li>Deluxe Corporation (IAC DevOps Engineer)</li>
             <li>Net Number Migrations — Project Lead (TestingXperts)</li>
             <li>IACT— Tx Internal (TestingXperts)</li>
             <li>Observability and Chaos Mesh— TX Internal (TestingXperts)</li>
         </ul>
-        <h3>Skills</h3>
+        <h3 class="text-2xl font-bold mt-8">Skills</h3>
         <p>AWS, Azure, GCP, Linux, Azure DevOps, Jenkins, SonarQube, Ansible, Chef, Terraform, Git, SVN, Docker, Kubernetes, Nexus, Python, Shell Scripting, Cybersecurity, VAPT, Nessus, OWASP ZAP, GFI Lan Guard, Nmap, Metasploit, OSINT, Burpsuite, Chaos Mesh, Grafana, AppDynamics, Datadog, Splunk</p>
-        <h3>Education</h3>
+        <h3 class="text-2xl font-bold mt-8">Education</h3>
         <p>B. Tech (CSE) from Shaheed Bhagat Singh State Tech. Uni. (SBSSTU), Firozpur (2017-2021)</p>
     </section>
     
-    <section id="cv">
-        <h2>Download CV</h2>
-        <p><a href="GurpreetCV.pdf" download>Click here to download my CV</a></p>
+    <section id="cv" class="container mx-auto my-12 p-8 bg-white rounded-lg shadow-lg text-center">
+        <h2 class="text-3xl font-bold mb-8">Download CV</h2>
+        <a href="gurpreetcv.pdf" download class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300">Click here to download my CV</a>
     </section>
 
-    <footer>
+    <footer class="bg-gray-900 text-white text-center py-4">
         <p>&copy; 2024 Gurpreet Singh. All rights reserved.</p>
     </footer>
 </body>
