@@ -116,6 +116,26 @@
             transform: scale(1.05);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
+
+        /* Licenses and Certifications */
+        .cert-card {
+            background: #ffffff;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cert-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .cert-card + .cert-card {
+            margin-top: 1rem;
+            border-top: 2px solid #667eea;
+            padding-top: 1rem;
+        }
     </style>
 </head>
 <body class="font-sans antialiased bg-gray-100 pattern-bg bg-shift zigzag-bg">
@@ -129,6 +149,7 @@
                 <li><a href="#projects-skills" class="hover:text-gray-300 nav-tab">Projects & Skills</a></li>
                 <li><a href="#education-cv" class="hover:text-gray-300 nav-tab">Education & CV</a></li>
                 <li><a href="#recommendations" class="hover:text-gray-300 nav-tab">Recommendations</a></li>
+                <li><a href="#certifications" class="hover:text-gray-300 nav-tab">Certifications</a></li>
             </ul>
         </nav>
     </header>
@@ -263,6 +284,64 @@
             <div class="p-4 bg-gray-100 rounded-lg shadow-sm slide-in-right text-gray-900">
                 <p><strong>Inder Preet Singh</strong> - Associate Tech Lead - Penetration Tester at Trantor</p>
                 <p>Gurpreet is a motivated, hard-working, and intelligent person who is an expert in his area.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="section-bg container mx-auto my-12 p-8 rounded-lg shadow-lg fade-in text-white">
+        <h2 class="text-4xl font-bold text-center mb-8 slide-in-left">Licenses and Certifications</h2>
+        <div class="space-y-6">
+            <div class="cert-card">
+                <p class="text-xl font-bold">Docker Essentials: A Developer Introduction</p>
+                <p class="text-md">Cognitive Class</p>
+                <p class="text-sm">Issued Jul 2024</p>
+                <p class="text-sm">Credential ID: 46b9e72ec80a4aff9970976f42dbefad</p>
+                <a href="#" class="underline text-blue-500">Show credential</a>
+            </div>
+            <div class="cert-card">
+                <p class="text-xl font-bold">Python Object-Oriented Programming</p>
+                <p class="text-md">LinkedIn</p>
+                <p class="text-sm">Issued May 2021</p>
+                <a href="#" class="underline text-blue-500">Show credential</a>
+            </div>
+            <div class="cert-card">
+                <p class="text-xl font-bold">Supervised Learning Essential Training</p>
+                <p class="text-md">LinkedIn</p>
+                <p class="text-sm">Issued May 2021</p>
+                <a href="#" class="underline text-blue-500">Show credential</a>
+            </div>
+            <div class="cert-card">
+                <p class="text-xl font-bold">AI for everyone</p>
+                <p class="text-md">Coursera</p>
+                <p class="text-sm">Issued Apr 2021</p>
+                <a href="#" class="underline text-blue-500">Show credential</a>
+            </div>
+            <div class="cert-card">
+                <p class="text-xl font-bold">Learning Python</p>
+                <p class="text-md">LinkedIn</p>
+                <p class="text-sm">Issued Apr 2021</p>
+                <a href="#" class="underline text-blue-500">Show credential</a>
+            </div>
+            <div class="cert-card">
+                <p class="text-xl font-bold">Certificate of Completion</p>
+                <p class="text-md">Amazon Web Services (AWS)</p>
+                <p class="text-sm">Issued Jan 2021</p>
+            </div>
+            <div class="cert-card">
+                <p class="text-xl font-bold">Accounting & Finance</p>
+                <p class="text-md">TestDome</p>
+                <p class="text-sm">Issued Jun 2020</p>
+                <p class="text-sm">Credential ID: aaf8b81800d34a58b16a1f8dc8f848e5</p>
+                <a href="#" class="underline text-blue-500">Show credential</a>
+            </div>
+            <div class="cert-card">
+                <p class="text-xl font-bold">Certificate of Completion</p>
+                <p class="text-md">Magnet Forensics</p>
+                <p class="text-sm">Issued Jun 2020</p>
+            </div>
+            <div class="cert-card">
+                <p class="text-xl font-bold">Accounting Aptitude</p>
+                <p class="text-md">TestDome</p>
             </div>
         </div>
     </section>
