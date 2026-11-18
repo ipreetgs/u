@@ -47,7 +47,7 @@ DQ.EXPERIENCE = [
     tags: ['VAPT', 'Network Security', 'Pentesting']
   },
   {
-    id: 'txp', org: 'TestingXperts', place: 'Punjab', role: 'DevOps Engineer',
+    id: 'txp', org: 'TestingXperts', place: 'Punjab', role: 'Senior DevOps Engineer',
     period: 'Jan 2022 – Aug 2026', building: 'castle', icon: 'fa-chess-rook',
     bullets: [
       'Automated AWS infrastructure provisioning using **Terraform & Jenkins**.',
@@ -160,65 +160,65 @@ DQ.PROBLEMS = [
     id: 'cve', boss: true, ongoing: true, kind: 'lich', where: 'OpsTree', icon: 'fa-shield-virus',
     colors: { body: '#3b0764', dark: '#1e0336', light: '#6b21a8', horn: '#facc15', eye: '#4ade80' },
     name: 'The CVE Lich', threat: 'An obsolete GitLab EE 15.x flagged for multiple CVEs',
-    problem: 'A self-managed **GitLab EE 15.x** server on **EC2 (Amazon Linux 2)**, behind an **AWS ALB**, had fallen far behind on releases and was flagged for **multiple CVEs**.',
-    fix: 'Leading the upgrade through a **safe, in-place upgrade path** rather than a risky rebuild.',
-    result: 'Boss fight in progress at OpsTree — the Lich is caged while the upgrade proceeds.'
+    problem: 'An **obsolete self-managed GitLab EE server** (15.x on **EC2, Amazon Linux 2**, behind an **AWS ALB**) was flagged for **multiple CVEs**.',
+    fix: 'Leading the upgrade via a **safe in-place upgrade path**.',
+    result: 'Upgrade in progress at OpsTree — the Lich stays caged until it lands.'
   },
   {
     id: 'crashloop', kind: 'imp', where: 'OpsTree', icon: 'fa-rotate',
     colors: { body: '#b91c1c', dark: '#7f1d1d', light: '#fca5a5', horn: '#fde68a', eye: '#fde047' },
     name: 'CrashLoop Daemon', threat: 'Amazon EKS workload & platform failures',
-    problem: 'Workloads and platform components on **Amazon EKS** were failing, and without a clear root cause the same failures could keep coming back.',
-    fix: '**Root cause analysis** of each EKS workload and platform failure.',
-    result: 'Findings, fixes and **preventive actions** documented so the failures don\'t repeat.'
+    problem: 'Amazon EKS **workload and platform failures** at OpsTree.',
+    fix: '**Root cause analysis (RCA)** of each failure.',
+    result: 'Findings, fixes and **preventive actions** documented.'
   },
   {
-    id: 'hydra', kind: 'hydra', where: 'TestingXperts', icon: 'fa-code-branch',
+    id: 'hydra', kind: 'hydra', where: 'Deluxe (DPP)', icon: 'fa-code-branch',
     colors: { body: '#15803d', dark: '#14532d', light: '#86efac', horn: '#fef08a', eye: '#fde047' },
-    name: 'The Pipeline Hydra', threat: '25+ apps, each shipping its own way',
-    problem: 'Enterprise applications were released through inconsistent pipelines, so quality and security checks varied from app to app.',
-    fix: 'Standardized CI/CD with **Harness, Jenkins and Azure DevOps**, adding automated **quality gates and security scanning** (SonarQube, Checkmarx, Trivy).',
-    result: '**25+ enterprise applications** on standardized CI/CD — more frequent releases, fewer deployment failures.'
+    name: 'The Pipeline Hydra', threat: 'CI/CD for 25+ enterprise applications',
+    problem: 'Standardizing **CI/CD across 25+ enterprise applications**, with automated quality gates and security scanning.',
+    fix: 'Secure pipelines built with **SonarQube, Checkmarx CxOne** and **JFrog Artifactory**, plus automated quality gates, on **Harness, Jenkins and Azure DevOps**.',
+    result: '**25+ enterprise applications** on standardized CI/CD — increasing release frequency while reducing deployment failures.'
   },
   {
-    id: 'downtime', kind: 'dragon', where: 'TestingXperts', icon: 'fa-power-off',
+    id: 'downtime', kind: 'dragon', where: 'Career highlight', icon: 'fa-power-off',
     colors: { body: '#c2410c', dark: '#7c2d12', light: '#fdba74', horn: '#fef3c7', eye: '#fde047' },
-    name: 'The Downtime Dragon', threat: 'Releases that take production offline',
-    problem: 'Deploying new versions of enterprise applications risked **downtime** for their users.',
-    fix: '**Blue-green deployments** with automated rollbacks on Docker and Kubernetes (Amazon EKS).',
+    name: 'The Downtime Dragon', threat: 'Zero-downtime releases for 13+ enterprise applications',
+    problem: 'Releasing new versions of **13+ enterprise applications** without downtime.',
+    fix: '**Blue-green strategies** with automated rollbacks and high availability on Docker and Kubernetes (Amazon EKS).',
     result: '**Zero-downtime blue-green deployments** for 13+ enterprise applications.'
   },
   {
-    id: 'cost', kind: 'golem', where: 'TestingXperts', icon: 'fa-dollar-sign',
+    id: 'cost', kind: 'golem', where: 'Career highlight', icon: 'fa-dollar-sign',
     colors: { body: '#78716c', dark: '#44403c', light: '#d6d3d1', horn: '#facc15', eye: '#facc15' },
-    name: 'The Cloud-Bill Golem', threat: 'Idle VMs and oversized resources',
-    problem: 'Cloud spend kept growing from VMs left running and resources that weren\'t sized to their workload.',
-    fix: '**AWS Lambda** automation to auto-shutdown idle VMs, plus **Azure resource rightsizing**.',
+    name: 'The Cloud-Bill Golem', threat: 'Cloud costs on AWS and Azure',
+    problem: 'Reducing **cloud costs** across AWS and Azure.',
+    fix: '**AWS Lambda-based automation** and **Azure resource rightsizing**.',
     result: '**Reduced cloud costs** across AWS and Azure.'
   },
   {
     id: 'migration', kind: 'ghost', where: 'Net Number', icon: 'fa-code-merge',
     colors: { body: '#67e8f9', dark: '#0e7490', light: '#cffafe', horn: '#fff', eye: '#22d3ee' },
-    name: 'The Legacy Repo Wraith', threat: 'Git & SVN repos stuck in the past',
-    problem: 'Repositories spread across **Git and SVN** had to move to **GitHub** without losing history or breaking anyone\'s workflow.',
-    fix: '**Python, Shell and Ansible** automation to validate repository integrity, reconfigure Jenkins pipelines and lock legacy repos — plus GitHub governance (branch protection, PR workflows).',
+    name: 'The Legacy Repo Wraith', threat: 'Git & SVN repositories moving to GitHub',
+    problem: 'Moving **Git and SVN repositories to GitHub** with zero disruption to development workflows.',
+    fix: '**Python, Shell and Ansible** automation to validate repository integrity and reconfigure Jenkins pipelines, plus **GitHub governance**: branch protection, PR workflows, automated security scanning and access controls.',
     result: '**100% migration accuracy** with **zero workflow disruption**.'
   },
   {
     id: 'silent', kind: 'ghost', where: 'TestingXperts', icon: 'fa-bell-slash',
     colors: { body: '#cbd5e1', dark: '#475569', light: '#f1f5f9', horn: '#fff', eye: '#f43f5e' },
-    name: 'The Silent-Failure Phantom', threat: 'Problems waiting for a human to notice',
-    problem: 'Detected application problems sat waiting for someone to notice them and fix them by hand.',
-    fix: 'A **Dynatrace auto-healing workflow integrated with Jenkins** to remediate detected problems automatically, with AppDynamics, Grafana and Prometheus alerting.',
-    result: 'Detected problems **remediated automatically**, with proactive alerting in place.'
+    name: 'The Silent-Failure Phantom', threat: 'Remediating detected problems',
+    problem: 'Automating the **remediation of detected problems**.',
+    fix: 'A **Dynatrace auto-healing workflow integrated with Jenkins**.',
+    result: 'Remediation of detected problems is **automated**.'
   },
   {
-    id: 'fragile', kind: 'imp', where: 'TestingXperts', icon: 'fa-bolt',
+    id: 'fragile', kind: 'imp', where: 'Observability & Chaos Engineering', icon: 'fa-bolt',
     colors: { body: '#be185d', dark: '#831843', light: '#f9a8d4', horn: '#e9d5ff', eye: '#a3e635' },
-    name: 'The Fragility Fiend', threat: 'Nobody knows what breaks first',
-    problem: 'Services on **Amazon EKS** had never been tested against real failure, so their resilience was unknown.',
-    fix: '**Chaos Mesh** resilience testing with **auto-healing** strategies.',
-    result: 'Improved **availability and fault tolerance**.'
+    name: 'The Fragility Fiend', threat: 'Availability and fault tolerance on Amazon EKS',
+    problem: 'Improving the **availability and fault tolerance** of containerized Python and .NET applications on Amazon EKS.',
+    fix: 'Designed **Chaos Mesh resilience testing** and **auto-healing strategies**.',
+    result: 'Strategies designed to improve **availability and fault tolerance**.'
   }
 ];
 
@@ -274,11 +274,7 @@ DQ.SKILLS = [
 DQ.CERTS = [
   { name: 'Harness CI, CD & GitOps', by: 'Developer & Administrator', icon: 'fa-solid fa-infinity' },
   { name: 'Google Cloud Digital Leader', by: 'Google Cloud', icon: 'fa-brands fa-google' },
-  { name: 'HHS Award', by: 'Outstanding performance · TestingXperts', icon: 'fa-solid fa-trophy' },
-  { name: 'AWS Certificate', by: 'Amazon Web Services', icon: 'fa-brands fa-aws' },
-  { name: 'Docker Essentials', by: 'Cognitive Class', icon: 'fa-brands fa-docker' },
-  { name: 'Network Security & Pentesting', by: 'EH1 Infotech', icon: 'fa-solid fa-user-shield' },
-  { name: 'Python OOP & AI', by: 'LinkedIn / Coursera', icon: 'fa-brands fa-python' }
+  { name: 'HHS Award', by: 'Outstanding performance · TestingXperts', icon: 'fa-solid fa-trophy' }
 ];
 
 /* Font Awesome icon for a skill/tag chip (exact name, then prefix match). */
