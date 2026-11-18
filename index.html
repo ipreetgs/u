@@ -1,763 +1,257 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gurpreet Singh - DevOps Engineer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" href="g.jpg" type="image/x-icon">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #0f172a;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #4f46e5;
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #4338ca;
-        }
-
-        /* Animation Utilities */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
-        }
-
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .glass-panel {
-            background: rgba(17, 24, 39, 0.7);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        .gradient-text {
-            background: linear-gradient(to right, #818cf8, #c084fc, #38bdf8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .nav-link {
-            position: relative;
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -4px;
-            left: 0;
-            background-color: #818cf8;
-            transition: width 0.3s;
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-        }
-
-        /* Ask Me Bot Anim */
-        .bot-message {
-            animation: popIn 0.3s ease-out forwards;
-            transform-origin: bottom left;
-        }
-
-        .user-message {
-            animation: popIn 0.3s ease-out forwards;
-            transform-origin: bottom right;
-        }
-
-        @keyframes popIn {
-            from {
-                opacity: 0;
-                transform: scale(0.9);
-            }
-
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-    </style>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        dark: '#0f172a', /* slate-900 */
-                        darker: '#020617', /* slate-950 */
-                        accent: '#6366f1', /* indigo-500 */
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['Fira Code', 'monospace'],
-                    }
-                }
-            }
-        }
-    </script>
+    <title>Gurpreet Singh — Senior DevOps Engineer</title>
+    <meta name="description"
+        content="Gurpreet Singh, Senior DevOps Engineer at OpsTree — Kubernetes, Amazon EKS, Terraform, CI/CD and DevSecOps across AWS, Azure and GCP.">
+    <meta name="theme-color" content="#0b1b3f">
+    <meta property="og:title" content="Gurpreet Singh — Senior DevOps Engineer">
+    <meta property="og:description" content="An interactive journey from the clouds to the sea, through the inferno and up to heaven.">
+    <meta property="og:image" content="avatar-lg.jpg">
+    <link rel="icon" href="g.jpg" type="image/jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&family=Sora:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="worlds.css">
 </head>
 
-<body class="bg-darker text-gray-300 font-sans antialiased overflow-x-hidden selection:bg-accent selection:text-white">
+<body>
+    <a class="skip" href="#main">Skip to content</a>
 
-    <!-- Background Effects -->
-    <div class="fixed inset-0 z-[-1]">
-        <div class="absolute top-0 left-1/4 w-96 h-96 bg-indigo-900/20 rounded-full blur-3xl animate-pulse"></div>
-        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-900/20 rounded-full blur-3xl animate-pulse"
-            style="animation-delay: 2s"></div>
-    </div>
+    <!-- ===================== NAV ===================== -->
+    <header class="nav" id="nav">
+        <a class="brand" href="#home" aria-label="Gurpreet Singh — home"><span class="brand-mark">GS</span><span
+                class="brand-name">Gurpreet Singh</span></a>
+        <nav class="nav-links" id="nav-links" aria-label="Sections">
+            <a href="#experience" data-sec="experience"><i class="fa-solid fa-cloud"></i>Experience</a>
+            <a href="#projects" data-sec="projects"><i class="fa-solid fa-sun"></i>Projects</a>
+            <a href="#skills" data-sec="skills"><i class="fa-solid fa-water"></i>Skills</a>
+            <a href="#problems" data-sec="problems"><i class="fa-solid fa-fire"></i>Problems solved</a>
+            <a href="#reviews" data-sec="reviews"><i class="fa-solid fa-dove"></i>Reviews</a>
+            <a href="#contact" data-sec="contact"><i class="fa-solid fa-paper-plane"></i>Contact</a>
+        </nav>
+        <a class="btn btn-sm btn-cv" href="GurpreetCV.pdf" download data-cv><i
+                class="fa-solid fa-cloud-arrow-down"></i><span>CV</span></a>
+        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links"
+            aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+    </header>
 
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex-shrink-0 font-mono font-bold text-xl text-white tracking-tighter">
-                    <span class="text-accent">&lt;</span>Gurpreet<span class="text-accent">/&gt;</span>
-                </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#home" class="nav-link text-sm font-medium hover:text-white transition-colors">Home</a>
-                        <a href="#about"
-                            class="nav-link text-sm font-medium hover:text-white transition-colors">About</a>
-                        <a href="#skills"
-                            class="nav-link text-sm font-medium hover:text-white transition-colors">Skills</a>
-                        <a href="#projects"
-                            class="nav-link text-sm font-medium hover:text-white transition-colors">Projects</a>
-                        <a href="#experience"
-                            class="nav-link text-sm font-medium hover:text-white transition-colors">Experience</a>
-                        <a href="#credentials"
-                            class="nav-link text-sm font-medium hover:text-white transition-colors">Credentials</a>
-                        <a href="#recommendations"
-                            class="nav-link text-sm font-medium hover:text-white transition-colors">Recommendations</a>
+    <!-- journey meter -->
+    <aside class="meter" aria-hidden="true">
+        <span class="meter-alt" id="meter-alt">10,000 m</span>
+        <ol id="meter-list">
+            <li data-sec="home"><i class="fa-solid fa-sun"></i><span>Sky</span></li>
+            <li data-sec="experience"><i class="fa-solid fa-cloud"></i><span>Clouds</span></li>
+            <li data-sec="projects"><i class="fa-solid fa-cloud-sun"></i><span>Golden hour</span></li>
+            <li data-sec="skills"><i class="fa-solid fa-water"></i><span>Sea</span></li>
+            <li data-sec="problems"><i class="fa-solid fa-fire"></i><span>Inferno</span></li>
+            <li data-sec="reviews"><i class="fa-solid fa-dove"></i><span>Heaven</span></li>
+        </ol>
+    </aside>
+
+    <main id="main">
+        <!-- ===================== HERO / SKY ===================== -->
+        <section id="home" class="world w-sky" data-alt="10,000 m">
+            <div class="sky-bg" aria-hidden="true">
+                <div class="stars"></div>
+                <div class="sun"></div>
+                <div class="cloud-layer" data-depth="0.15" id="clouds-far"></div>
+                <div class="cloud-layer" data-depth="0.35" id="clouds-mid"></div>
+                <div class="cloud-layer" data-depth="0.7" id="clouds-near"></div>
+            </div>
+            <div class="container hero">
+                <div class="hero-copy">
+                    <span class="pill"><span class="pulse-dot"></span>Senior DevOps Engineer · OpsTree, Noida</span>
+                    <h1><span class="h1-small">Hi, I'm</span> Gurpreet Singh</h1>
+                    <p class="lead">I build cloud platforms that stay up — Kubernetes, CI/CD and Infrastructure-as-Code
+                        across <b>AWS</b>, <b>Azure</b> and <b>GCP</b>.</p>
+                    <div class="hero-cta">
+                        <a class="btn btn-primary" href="#experience">Start the journey <i
+                                class="fa-solid fa-arrow-down"></i></a>
+                        <a class="btn btn-glass" href="#contact">Get in touch</a>
                     </div>
+                    <ul class="hero-stats" id="hero-stats"></ul>
                 </div>
-                <div class="block md:hidden">
-                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
+                <div class="hero-visual">
+                    <div class="orbit" id="orbit">
+                        <div class="orbit-ring"></div>
+                        <img class="portrait" src="avatar-lg.jpg" alt="Portrait of Gurpreet Singh" width="320"
+                            height="320">
+                    </div>
+                    <a class="cv-cloud" id="cv-cloud" href="GurpreetCV.pdf" download data-cv
+                        aria-label="Download CV from the cloud">
+                        <span class="cv-rain" aria-hidden="true"></span>
+                        <svg class="cv-cloud-svg" viewBox="0 0 220 120" aria-hidden="true">
+                            <use href="#s-cloud" />
+                        </svg>
+                        <span class="cv-cloud-label"><i class="fa-solid fa-cloud-arrow-down"></i> Download CV<small>pull
+                                from the cloud</small></span>
+                        <span class="cv-doc" aria-hidden="true"><i class="fa-solid fa-file-pdf"></i></span>
+                    </a>
                 </div>
             </div>
-        </div>
-        <!-- Mobile Menu -->
-        <div class="md:hidden hidden glass-panel border-t border-gray-800" id="mobile-menu">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#home"
-                    class="block px-3 py-2 rounded-md text-base font-medium hover:text-white hover:bg-gray-800">Home</a>
-                <a href="#about"
-                    class="block px-3 py-2 rounded-md text-base font-medium hover:text-white hover:bg-gray-800">About</a>
-                <a href="#skills"
-                    class="block px-3 py-2 rounded-md text-base font-medium hover:text-white hover:bg-gray-800">Skills</a>
-                <a href="#projects"
-                    class="block px-3 py-2 rounded-md text-base font-medium hover:text-white hover:bg-gray-800">Projects</a>
-                <a href="#credentials"
-                    class="block px-3 py-2 rounded-md text-base font-medium hover:text-white hover:bg-gray-800">Credentials</a>
-                <a href="#recommendations"
-                    class="block px-3 py-2 rounded-md text-base font-medium hover:text-white hover:bg-gray-800">Recommendations</a>
-            </div>
-        </div>
-    </nav>
+            <a class="scroll-cue" href="#experience" aria-label="Scroll to experience"><span></span></a>
+        </section>
 
-    <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center justify-center pt-16 relative">
-        <div class="text-center px-4 max-w-4xl mx-auto z-10 reveal active">
-            <div class="mb-6 relative inline-block">
-                <div
-                    class="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full blur opacity-75 animate-pulse">
-                </div>
-                <img src="pic1.jpg" alt="Gurpreet Singh"
-                    class="relative w-40 h-40 rounded-full object-cover border-4 border-darker shadow-2xl mx-auto">
-            </div>
-            <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight text-white">
-                Hi, I'm <span class="gradient-text">Gurpreet Singh</span>
-            </h1>
-            <p class="text-xl md:text-2xl text-gray-400 mb-8 font-light max-w-2xl mx-auto">
-                DevOps Engineer specializing in Cloud Automation, Security, and Scalable Infrastructure.
-            </p>
-            <div class="flex flex-wrap justify-center gap-4 text-3xl mb-10">
-                <a href="https://linkedin.com/in/ipreetgs" target="_blank"
-                    class="text-gray-400 hover:text-[#0077b5] transition-transform hover:scale-110"><i
-                        class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/ipreetgs" target="_blank"
-                    class="text-gray-400 hover:text-white transition-transform hover:scale-110"><i
-                        class="fab fa-github"></i></a>
-                <a href="https://instagram.com/__gurpreet__23" target="_blank"
-                    class="text-gray-400 hover:text-[#E1306C] transition-transform hover:scale-110"><i
-                        class="fab fa-instagram"></i></a>
-                <a href="mailto:preetgur.gsr@gmail.com"
-                    class="text-gray-400 hover:text-red-400 transition-transform hover:scale-110"><i
-                        class="fas fa-envelope"></i></a>
-            </div>
-            <a href="GurpreetCV.pdf" download
-                class="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-indigo-600 hover:bg-indigo-700 md:text-lg transition-all shadow-lg hover:shadow-indigo-500/30">
-                <i class="fas fa-download mr-2"></i> Download CV
-            </a>
-        </div>
-
-        <!-- Scroll Down Indicator -->
-        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-gray-500">
-            <i class="fas fa-chevron-down text-2xl"></i>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-24 bg-dark">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center reveal">
-                <div class="order-2 md:order-1">
-                    <h2 class="text-3xl font-bold text-white mb-6 flex items-center">
-                        <span class="text-accent mr-3">01.</span> About Me
-                    </h2>
-                    <p class="text-gray-400 leading-relaxed mb-6">
-                        I am a results-driven <strong class="text-white">DevOps Engineer</strong> with extensive
-                        expertise in designing and optimizing CI/CD pipelines, container orchestration, and scalable
-                        cloud infrastructures.
-                    </p>
-                    <p class="text-gray-400 leading-relaxed mb-6">
-                        With a solid technical background in automation, I excel at collaborating with cross-functional
-                        teams to deliver secure, high-performance solutions. My journey includes hands-on experience
-                        with <span class="text-indigo-400">AWS, Azure, GCP</span>, and a strong foundation in <span
-                            class="text-indigo-400">Network Security</span> & <span class="text-indigo-400">Ethical
-                            Hacking</span>.
-                    </p>
-                    <div class="grid grid-cols-2 gap-4 text-sm font-mono text-gray-500">
-                        <div class="flex items-center"><i class="fas fa-caret-right text-accent mr-2"></i>Terraform
-                        </div>
-                        <div class="flex items-center"><i class="fas fa-caret-right text-accent mr-2"></i>Kubernetes
-                        </div>
-                        <div class="flex items-center"><i class="fas fa-caret-right text-accent mr-2"></i>Python</div>
-                        <div class="flex items-center"><i
-                                class="fas fa-caret-right text-accent mr-2"></i>Jenkins/Harness</div>
-                    </div>
-                </div>
-                <div class="order-1 md:order-2 flex justify-center relative">
-                    <div class="relative w-64 h-64 md:w-80 md:h-80">
-                        <div
-                            class="absolute inset-0 border-2 border-accent rounded-xl transform translate-x-4 translate-y-4">
-                        </div>
-                        <img src="pic.jpg" alt="About Image"
-                            class="absolute inset-0 w-full h-full object-cover rounded-xl shadow-lg grayscale hover:grayscale-0 transition-all duration-500">
-                    </div>
+        <!-- ===================== EXPERIENCE / CLOUDS ===================== -->
+        <section id="experience" class="world w-clouds" data-alt="6,000 m">
+            <div class="drift-clouds" aria-hidden="true" id="exp-clouds"></div>
+            <div class="container">
+                <header class="sec-head">
+                    <span class="eyebrow"><i class="fa-solid fa-cloud"></i> 01 · Through the clouds</span>
+                    <h2>Experience</h2>
+                    <p>Nearly five years of shipping infrastructure — currently steering Kubernetes platforms at
+                        OpsTree.</p>
+                </header>
+                <div class="flight" id="flight">
+                    <div class="flight-line"><span class="flight-fill" id="flight-fill"></span></div>
+                    <div class="plane" id="plane" aria-hidden="true"></div>
+                    <ol class="timeline" id="timeline"></ol>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="py-24 bg-darker">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
-            <h2 class="text-3xl font-bold text-white mb-12 flex items-center">
-                <span class="text-accent mr-3">02.</span> Technical Arsenal
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Skill Card 1 -->
-                <div class="glass-panel p-6 rounded-xl hover:bg-white/5 transition-colors group">
-                    <div class="text-4xl text-blue-400 mb-4 group-hover:scale-110 transition-transform"><i
-                            class="fas fa-cloud"></i></div>
-                    <h3 class="text-xl font-bold text-white mb-2">Cloud Platforms</h3>
-                    <p class="text-gray-400 text-sm">AWS, Azure, Google Cloud Platform (GCP)</p>
+        <!-- ===================== PROJECTS / GOLDEN HOUR ===================== -->
+        <section id="projects" class="world w-golden" data-alt="3,000 m">
+            <div class="golden-bg" aria-hidden="true">
+                <div class="golden-sun"></div>
+                <div class="cloud-bank" id="golden-bank"></div>
+            </div>
+            <div class="container">
+                <header class="sec-head">
+                    <span class="eyebrow"><i class="fa-solid fa-cloud-sun"></i> 02 · Above the cloud line</span>
+                    <h2>Projects</h2>
+                    <p>What I'm building now at OpsTree, and the missions before it. <span class="hint-desk">Keep
+                            scrolling — the cards glide sideways.</span></p>
+                </header>
+            </div>
+            <div class="hscroll" id="hscroll">
+                <div class="hscroll-track" id="proj-track"></div>
+            </div>
+        </section>
+
+        <!-- cloud dive: the clouds part and the sea appears -->
+        <div class="cloud-dive" id="cloud-dive" aria-hidden="true">
+            <div class="dive-left"></div>
+            <div class="dive-right"></div>
+            <p class="dive-text">Descending to sea level…</p>
+        </div>
+
+        <!-- ===================== SKILLS / SEA ===================== -->
+        <section id="skills" class="world w-sea" data-alt="0 m · sea level">
+            <div class="container">
+                <header class="sec-head on-dark">
+                    <span class="eyebrow"><i class="fa-solid fa-water"></i> 03 · The DevOps Sea</span>
+                    <h2>Skills</h2>
+                    <p><i>Kubernetes</i> is Greek for <i>helmsman</i>. Take the wheel — or tap anything in the sea.</p>
+                </header>
+            </div>
+            <div class="sea-wrap" id="sea-wrap">
+                <div class="sea-scene" id="sea-scene"></div>
+            </div>
+            <p class="sea-hint"><i class="fa-solid fa-arrows-left-right"></i> Swipe the sea sideways · tap anything</p>
+            <div class="container helm-zone">
+                <div class="helm" id="helm">
+                    <div class="helm-pointer" aria-hidden="true"><i class="fa-solid fa-caret-down"></i></div>
+                    <div class="helm-wheel" id="helm-wheel" tabindex="0" role="slider" aria-label="Ship's wheel: choose a skill area"
+                        aria-valuemin="1" aria-valuemax="8" aria-valuenow="1"></div>
+                    <p class="helm-tip"><i class="fa-solid fa-hand"></i> Drag the wheel or tap a handle</p>
                 </div>
-                <!-- Skill Card 2 -->
-                <div class="glass-panel p-6 rounded-xl hover:bg-white/5 transition-colors group">
-                    <div class="text-4xl text-purple-400 mb-4 group-hover:scale-110 transition-transform"><i
-                            class="fas fa-code-branch"></i></div>
-                    <h3 class="text-xl font-bold text-white mb-2">Infrastructure Automation</h3>
-                    <p class="text-gray-400 text-sm">Terraform, Terragrunt, Ansible, Chef</p>
+                <div class="helm-panel" id="helm-panel" aria-live="polite"></div>
+            </div>
+            <div class="container pods-zone">
+                <div class="kubectl" id="kubectl">
+                    <div class="kubectl-bar"><span></span><span></span><span></span><b>kubectl get pods -w</b></div>
+                    <pre id="kubectl-log"></pre>
                 </div>
-                <!-- Skill Card 3 -->
-                <div class="glass-panel p-6 rounded-xl hover:bg-white/5 transition-colors group">
-                    <div class="text-4xl text-green-400 mb-4 group-hover:scale-110 transition-transform"><i
-                            class="fas fa-infinity"></i></div>
-                    <h3 class="text-xl font-bold text-white mb-2">CI/CD & DevOps</h3>
-                    <p class="text-gray-400 text-sm">Jenkins, Harness, Azure DevOps, Git, SVN</p>
-                </div>
-                <!-- Skill Card 4 -->
-                <div class="glass-panel p-6 rounded-xl hover:bg-white/5 transition-colors group">
-                    <div class="text-4xl text-blue-500 mb-4 group-hover:scale-110 transition-transform"><i
-                            class="fab fa-docker"></i></div>
-                    <h3 class="text-xl font-bold text-white mb-2">Containerization</h3>
-                    <p class="text-gray-400 text-sm">Docker, Kubernetes (EKS, AKS), Nexus</p>
-                </div>
-                <!-- Skill Card 5 -->
-                <div class="glass-panel p-6 rounded-xl hover:bg-white/5 transition-colors group">
-                    <div class="text-4xl text-yellow-400 mb-4 group-hover:scale-110 transition-transform"><i
-                            class="fab fa-python"></i></div>
-                    <h3 class="text-xl font-bold text-white mb-2">Scripting</h3>
-                    <p class="text-gray-400 text-sm">Python, BASH/Shell Scripting</p>
-                </div>
-                <!-- Skill Card 6 -->
-                <div class="glass-panel p-6 rounded-xl hover:bg-white/5 transition-colors group">
-                    <div class="text-4xl text-red-500 mb-4 group-hover:scale-110 transition-transform"><i
-                            class="fas fa-shield-alt"></i></div>
-                    <h3 class="text-xl font-bold text-white mb-2">Security & Observability</h3>
-                    <p class="text-gray-400 text-sm">SonarQube, Trivy, Prometheus, Grafana, AppDynamics, Dynatrace, Loki
-                    </p>
+                <div class="pods-copy">
+                    <h3><i class="fa-brands fa-docker"></i> Pod delivery service</h3>
+                    <p>The shark tows freshly built containers from the registry and drops them onto the
+                        cluster. Zero-downtime, of course.</p>
+                    <button class="btn btn-primary" id="deploy-pods"><i class="fa-solid fa-ship"></i> Deploy
+                        pods</button>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="py-24 bg-dark">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
-            <h2 class="text-3xl font-bold text-white mb-12 flex items-center">
-                <span class="text-accent mr-3">03.</span> Featured Projects
-            </h2>
-            <div class="space-y-12">
-
-                <!-- Project 1 -->
-                <div class="glass-panel p-8 rounded-2xl relative overflow-hidden group">
-                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                        <i class="fas fa-network-wired text-9xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-2">Deluxe Corporation (DPP)</h3>
-                    <p class="text-accent font-mono text-sm mb-4">Infrastructure-as-Code & CI/CD Pipelines</p>
-                    <ul class="text-gray-400 list-disc list-inside space-y-2 mb-6">
-                        <li>Provisioned v-Sphere infrastructure using Terraform & Terragrunt with reusable modules.</li>
-                        <li>Automated deployments via Harness pipelines, integrating SonarQube & Checkmarx.</li>
-                        <li>Orchestrated zero-downtime blue-green deployments across all environments.</li>
-                        <li>Deployed Dynatrace for real-time observability and performance optimization.</li>
-                    </ul>
-                    <div class="flex flex-wrap gap-2 text-xs font-mono text-indigo-300">
-                        <span class="bg-indigo-900/50 px-3 py-1 rounded-full">Terraform</span>
-                        <span class="bg-indigo-900/50 px-3 py-1 rounded-full">Harness</span>
-                        <span class="bg-indigo-900/50 px-3 py-1 rounded-full">Dynatrace</span>
-                        <span class="bg-indigo-900/50 px-3 py-1 rounded-full">JFrog</span>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="glass-panel p-8 rounded-2xl relative overflow-hidden group">
-                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                        <i class="fas fa-server text-9xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-2">SRA (Solicitors Regulation Authority)</h3>
-                    <p class="text-accent font-mono text-sm mb-4">Migration & Azure Cloud Management</p>
-                    <ul class="text-gray-400 list-disc list-inside space-y-2 mb-6">
-                        <li>Led Azure Landing Zone migration, provisioning Function Apps & Storage Accounts via
-                            Terraform.</li>
-                        <li>Optimized cloud spend by upgrading WebApp SKUs (P2v2 → P3v0) for better performance.</li>
-                        <li>Configured Azure Front Door for global access, security, and routing.</li>
-                        <li>Built Azure dashboards using KQL for proactive anomaly detection.</li>
-                    </ul>
-                    <div class="flex flex-wrap gap-2 text-xs font-mono text-indigo-300">
-                        <span class="bg-indigo-900/50 px-3 py-1 rounded-full">Azure</span>
-                        <span class="bg-indigo-900/50 px-3 py-1 rounded-full">Terraform</span>
-                        <span class="bg-indigo-900/50 px-3 py-1 rounded-full">KQL</span>
-                        <span class="bg-indigo-900/50 px-3 py-1 rounded-full">Front Door</span>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="glass-panel p-8 rounded-2xl relative overflow-hidden group">
-                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                        <i class="fas fa-exchange-alt text-9xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-2">Net Number Migrations</h3>
-                    <p class="text-accent font-mono text-sm mb-4">Repo Migration & Governance</p>
-                    <ul class="text-gray-400 list-disc list-inside space-y-2 mb-6">
-                        <li>Migrated Git/SVN repositories to GitHub with zero disruption.</li>
-                        <li>Developed Python/Shell scripts to verify integrity and commit history.</li>
-                        <li>Implemented repository locking via Ansible to prevent legacy commits.</li>
-                    </ul>
-                    <div class="flex flex-wrap gap-2 text-xs font-mono text-indigo-300">
-                        <span class="bg-indigo-900/50 px-3 py-1 rounded-full">Python</span>
-                        <span class="bg-indigo-900/50 px-3 py-1 rounded-full">Ansible</span>
-                        <span class="bg-indigo-900/50 px-3 py-1 rounded-full">GitHub Migration</span>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience & Education Section -->
-    <section id="experience" class="py-24 bg-darker">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
-            <h2 class="text-3xl font-bold text-white mb-12 flex items-center">
-                <span class="text-accent mr-3">04.</span> Experience & Education
-            </h2>
-            <div class="relative border-l border-gray-700 ml-4 space-y-12">
-
-                <!-- Exp Item 1 -->
-                <div class="relative pl-8">
-                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-accent ring-4 ring-darker"></div>
-                    <h3 class="text-xl font-bold text-white">DevOps Engineer</h3>
-                    <p class="text-indigo-400 text-sm mb-2">TestingXperts | Jan 2022 - Present</p>
-                    <ul class="text-gray-400 text-sm list-disc list-inside space-y-1">
-                        <li>Automated AWS infrastructure provisioning using Terraform & Jenkins.</li>
-                        <li>Optimized AWS VM costs using Lambda for auto-shutdown.</li>
-                        <li>Deployed Python apps on GCP using Cloud Build.</li>
-                        <li>Spearheaded repo migrations to GitHub using Ansible & custom scripts.</li>
-                    </ul>
-                </div>
-
-                <!-- Exp Item 2 -->
-                <div class="relative pl-8">
-                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-gray-600 ring-4 ring-darker"></div>
-                    <h3 class="text-xl font-bold text-white">Network Security Trainee</h3>
-                    <p class="text-indigo-400 text-sm mb-2">EH1 Infotech | Jun 2018 - Aug 2018</p>
-                    <p class="text-gray-400 text-sm">Focused on VAPT (Vulnerability Assessment and Penetration Testing)
-                        and Network Security protocols.</p>
-                </div>
-
-                <!-- Edu Item -->
-                <div class="relative pl-8 pt-4">
-                    <div class="absolute -left-[9px] top-4 w-4 h-4 rounded-full bg-indigo-500 ring-4 ring-darker"></div>
-                    <h3 class="text-xl font-bold text-white">B. Tech (Computer Science Engineering)</h3>
-                    <p class="text-indigo-400 text-sm mb-2">Shaheed Bhagat Singh State Technical University | 2017 -
-                        2021</p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Credentials Section -->
-    <section id="credentials" class="py-24 bg-dark">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
-            <h2 class="text-3xl font-bold text-white mb-12 flex items-center">
-                <span class="text-accent mr-3">05.</span> Certifications & Awards
-            </h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="glass-panel p-5 rounded-lg border-l-4 border-green-500">
-                    <h4 class="font-bold text-white text-lg">Harness CI/CD & GitOps</h4>
-                    <p class="text-gray-400 text-xs mt-1">Developer & Administrator</p>
-                </div>
-                <div class="glass-panel p-5 rounded-lg border-l-4 border-blue-500">
-                    <h4 class="font-bold text-white text-lg">Google Cloud Digital Leader</h4>
-                    <p class="text-gray-400 text-xs mt-1">Google Cloud</p>
-                </div>
-                <div class="glass-panel p-5 rounded-lg border-l-4 border-yellow-500">
-                    <h4 class="font-bold text-white text-lg">AWS Certificate</h4>
-                    <p class="text-gray-400 text-xs mt-1">Amazon Web Services</p>
-                </div>
-                <div class="glass-panel p-5 rounded-lg border-l-4 border-indigo-500">
-                    <h4 class="font-bold text-white text-lg">Docker Essentials</h4>
-                    <p class="text-gray-400 text-xs mt-1">Cognitive Class</p>
-                </div>
-                <div class="glass-panel p-5 rounded-lg border-l-4 border-red-500">
-                    <h4 class="font-bold text-white text-lg">Network Security & Pentesting</h4>
-                    <p class="text-gray-400 text-xs mt-1">EH1Infotech</p>
-                </div>
-                <div class="glass-panel p-5 rounded-lg border-l-4 border-purple-500">
-                    <h4 class="font-bold text-white text-lg">Python OOP & AI</h4>
-                    <p class="text-gray-400 text-xs mt-1">LinkedIn / Coursera</p>
+            <div class="container">
+                <div class="certs" id="certs">
+                    <h3><i class="fa-solid fa-gem"></i> Treasure from the sea floor <small>Certifications &amp;
+                            awards</small></h3>
+                    <div class="cert-grid" id="cert-grid"></div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Recommendations Section -->
-    <section id="recommendations" class="py-24 bg-darker">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
-            <h2 class="text-3xl font-bold text-white mb-12 flex items-center">
-                <span class="text-accent mr-3">06.</span> Recommendations
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-                <!-- Rec Card 1 -->
-                <div class="glass-panel p-6 rounded-xl relative">
-                    <i class="fas fa-quote-left text-4xl text-indigo-500/20 absolute top-4 right-4"></i>
-                    <p class="text-gray-300 italic mb-4">"A hardworking person with demonstrated outstanding technical
-                        abilities in cloud and DevOps. Their technical acumen, problem-solving skills, and ability to
-                        mentor others set them apart. Gurpreet is a true asset to any team looking to enhance their
-                        operational capabilities."</p>
-                    <div class="flex items-center mt-4">
-                        <div
-                            class="w-10 h-10 rounded-full bg-indigo-500 flex items-center justify-center text-white font-bold text-lg mr-3">
-                            M</div>
-                        <div>
-                            <h4 class="font-bold text-white">Manisha Verma</h4>
-                            <p class="text-indigo-400 text-xs">Software Engineer at TestingXperts</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Rec Card 2 -->
-                <div class="glass-panel p-6 rounded-xl relative">
-                    <i class="fas fa-quote-left text-4xl text-indigo-500/20 absolute top-4 right-4"></i>
-                    <p class="text-gray-300 italic mb-4">"Gurpreet is an exceptional DevOps Engineer who streamlined our
-                        CI/CD processes, managed Azure IaaS, and optimized infrastructure with Terraform. Their
-                        technical expertise, problem-solving skills, and proactive approach greatly contributed to our
-                        team's success. Highly recommended!"</p>
-                    <div class="flex items-center mt-4">
-                        <div
-                            class="w-10 h-10 rounded-full bg-yellow-500 flex items-center justify-center text-white font-bold text-lg mr-3">
-                            P</div>
-                        <div>
-                            <h4 class="font-bold text-white">Priti Ranga</h4>
-                            <p class="text-indigo-400 text-xs">DevOps Engineer</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Rec Card 3 -->
-                <div class="glass-panel p-6 rounded-xl relative">
-                    <i class="fas fa-quote-left text-4xl text-indigo-500/20 absolute top-4 right-4"></i>
-                    <p class="text-gray-300 italic mb-4">"Gurpreet has consistently demonstrated exceptional technical
-                        expertise in DevOps practices, streamlining our workflows and improving our software quality. He
-                        is a proactive learner who keeps our team updated on industry best practices, a strong
-                        communicator who fosters collaboration, and a reliable, deadline-oriented professional."</p>
-                    <div class="flex items-center mt-4">
-                        <div
-                            class="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center text-white font-bold text-lg mr-3">
-                            N</div>
-                        <div>
-                            <h4 class="font-bold text-white">Navjit Kaur</h4>
-                            <p class="text-indigo-400 text-xs">Software Engineer</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Rec Card 4 -->
-                <div class="glass-panel p-6 rounded-xl relative">
-                    <i class="fas fa-quote-left text-4xl text-indigo-500/20 absolute top-4 right-4"></i>
-                    <p class="text-gray-300 italic mb-4">"Gurpreet is a motivated, hard-working, and intelligent person
-                        who is an expert in his area."</p>
-                    <div class="flex items-center mt-4">
-                        <div
-                            class="w-10 h-10 rounded-full bg-red-500 flex items-center justify-center text-white font-bold text-lg mr-3">
-                            I</div>
-                        <div>
-                            <h4 class="font-bold text-white">Inder Preet Singh</h4>
-                            <p class="text-indigo-400 text-xs">Associate Tech Lead - Penetration Tester at Trantor</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Rec Card 5 -->
-                <div class="glass-panel p-6 rounded-xl relative">
-                    <i class="fas fa-quote-left text-4xl text-indigo-500/20 absolute top-4 right-4"></i>
-                    <p class="text-gray-300 italic mb-4">"A hard working person with high skills and excellent knowledge
-                        in DevOps and development."</p>
-                    <div class="flex items-center mt-4">
-                        <div
-                            class="w-10 h-10 rounded-full bg-purple-500 flex items-center justify-center text-white font-bold text-lg mr-3">
-                            M</div>
-                        <div>
-                            <h4 class="font-bold text-white">Mayur Prabhat</h4>
-                            <p class="text-indigo-400 text-xs">DevSecOps Engineer at Axis Bank</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Rec Card 6 -->
-                <div class="glass-panel p-6 rounded-xl relative">
-                    <i class="fas fa-quote-left text-4xl text-indigo-500/20 absolute top-4 right-4"></i>
-                    <p class="text-gray-300 italic mb-4">"Gurpreet Singh is working hard as a DevOps engineer and he is
-                        always eager to work and learn new skills."</p>
-                    <div class="flex items-center mt-4">
-                        <div
-                            class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold text-lg mr-3">
-                            G</div>
-                        <div>
-                            <h4 class="font-bold text-white">Gurwinder Singh</h4>
-                            <p class="text-indigo-400 text-xs">Student at Conestoga College</p>
-                        </div>
-                    </div>
-                </div>
-
+        <!-- ===================== PROBLEMS / INFERNO ===================== -->
+        <section id="problems" class="world w-inferno" data-alt="−6,371 km">
+            <canvas class="embers" id="embers" aria-hidden="true"></canvas>
+            <div class="spires" aria-hidden="true"></div>
+            <div class="container">
+                <header class="sec-head on-dark">
+                    <span class="eyebrow"><i class="fa-solid fa-fire"></i> 04 · Into the inferno</span>
+                    <h2>Problems I've solved</h2>
+                    <p>Every engineer walks through fire. Hit <b>Deploy the fix</b> to put each one out.</p>
+                    <div class="fire-meter"><span id="fires-out">0</span> / <span id="fires-total">8</span> fires
+                        out<span class="fire-meter-bar"><i id="fire-bar"></i></span></div>
+                </header>
+                <div class="fire-grid" id="fire-grid"></div>
             </div>
+            <div class="lava" aria-hidden="true"></div>
+        </section>
+
+        <!-- ascension: light floods in -->
+        <div class="ascend" id="ascend" aria-hidden="true">
+            <div class="ascend-beam" id="ascend-beam"></div>
+            <p class="ascend-text">…and then, up into the light</p>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="bg-darker py-8 border-t border-gray-800 text-center">
-        <p class="text-gray-500 text-sm">&copy; 2024 Gurpreet Singh. Built with <span class="text-red-500">❤</span> &
-            Code.</p>
-    </footer>
-
-    <!-- Chat Bot Floating Button -->
-    <button id="chatbot-toggle"
-        class="fixed bottom-6 right-6 bg-indigo-600 hover:bg-indigo-700 text-white p-4 rounded-full shadow-2xl z-50 transition-transform hover:scale-110">
-        <i class="fas fa-comment-dots text-2xl"></i>
-    </button>
-
-    <!-- Chat Bot Modal -->
-    <div id="chatbot-modal"
-        class="fixed bottom-24 right-6 w-80 md:w-96 glass-panel rounded-2xl shadow-2xl z-50 hidden flex-col border border-indigo-500/30 overflow-hidden transition-all origin-bottom-right transform scale-95 opacity-0">
-        <div class="bg-indigo-900/80 p-4 flex justify-between items-center border-b border-indigo-500/30">
-            <h3 class="text-white font-bold flex items-center"><i class="fas fa-robot mr-2"></i> DevOps Assistant</h3>
-            <button id="chatbot-close" class="text-gray-300 hover:text-white"><i class="fas fa-times"></i></button>
-        </div>
-        <div id="chat-window" class="h-80 overflow-y-auto p-4 space-y-3 bg-darker/50">
-            <div
-                class="bot-message bg-indigo-900/40 text-gray-200 p-3 rounded-lg rounded-tl-none text-sm inline-block max-w-[85%] border border-indigo-500/20">
-                Hello! I'm Gurpreet's AI assistant. Ask me about his <strong>projects</strong>, <strong>skills</strong>,
-                or <strong>experience</strong>, or click a suggestion below!
+        <!-- ===================== REVIEWS / HEAVEN ===================== -->
+        <section id="reviews" class="world w-heaven" data-alt="∞">
+            <div class="heaven-bg" aria-hidden="true">
+                <div class="rays"></div>
+                <div class="gates" id="gates"></div>
+                <div class="motes"></div>
             </div>
-        </div>
-        <div id="suggestions" class="px-4 pb-2 flex gap-2 overflow-x-auto whitespace-nowrap">
-            <button
-                class="suggestion-btn bg-indigo-900/60 border border-indigo-500/30 text-xs text-indigo-200 px-3 py-1 rounded-full hover:bg-indigo-800 transition">Projects?</button>
-            <button
-                class="suggestion-btn bg-indigo-900/60 border border-indigo-500/30 text-xs text-indigo-200 px-3 py-1 rounded-full hover:bg-indigo-800 transition">Skills?</button>
-            <button
-                class="suggestion-btn bg-indigo-900/60 border border-indigo-500/30 text-xs text-indigo-200 px-3 py-1 rounded-full hover:bg-indigo-800 transition">Contact
-                Info</button>
-            <button
-                class="suggestion-btn bg-indigo-900/60 border border-indigo-500/30 text-xs text-indigo-200 px-3 py-1 rounded-full hover:bg-indigo-800 transition">Download
-                CV</button>
-        </div>
-        <div class="p-3 bg-darker border-t border-indigo-500/30">
-            <form id="chat-form" class="flex gap-2">
-                <input type="text" id="chat-input" placeholder="Type a message..."
-                    class="flex-1 bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:border-indigo-500">
-                <button type="submit"
-                    class="bg-indigo-600 hover:bg-indigo-700 text-white px-3 py-2 rounded-lg transition-colors"><i
-                        class="fas fa-paper-plane"></i></button>
-            </form>
-        </div>
-    </div>
+            <div class="container">
+                <header class="sec-head">
+                    <span class="eyebrow"><i class="fa-solid fa-dove"></i> 05 · Heaven</span>
+                    <h2>Kind words</h2>
+                    <p>Recommendations from people I've worked with.</p>
+                </header>
+                <div class="angel-grid" id="angel-grid"></div>
+            </div>
+            <div class="cloud-floor" id="cloud-floor" aria-hidden="true"></div>
+        </section>
 
-    <script>
-        // Reveal Animations
-        function reveal() {
-            var reveals = document.querySelectorAll(".reveal");
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 100;
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("active");
-                }
-            }
-        }
-        window.addEventListener("scroll", reveal);
-        reveal(); // Trigger once on load
+        <!-- ===================== CONTACT ===================== -->
+        <section id="contact" class="world w-gold" data-alt="∞">
+            <div class="container contact">
+                <span class="eyebrow"><i class="fa-solid fa-paper-plane"></i> 06 · Let's talk</span>
+                <h2>Let's build something<br>that stays up.</h2>
+                <p>Open to Senior DevOps, Cloud, Platform and SRE roles — Chandigarh, Mohali or remote.</p>
+                <div class="contact-grid" id="contact-grid"></div>
+            </div>
+            <footer class="footer">
+                <span>© 2026 Gurpreet Singh</span>
+                <a href="classic.html">Classic version</a>
+            </footer>
+        </section>
+    </main>
 
-        // Mobile Menu Toggle
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-
-        // Chatbot Logic
-        const chatToggle = document.getElementById('chatbot-toggle');
-        const chatModal = document.getElementById('chatbot-modal');
-        const chatClose = document.getElementById('chatbot-close');
-        const chatForm = document.getElementById('chat-form');
-        const chatInput = document.getElementById('chat-input');
-        const chatWindow = document.getElementById('chat-window');
-        const suggestionBtns = document.querySelectorAll('.suggestion-btn');
-
-        chatToggle.addEventListener('click', () => {
-            chatModal.classList.toggle('hidden');
-            setTimeout(() => {
-                chatModal.classList.toggle('scale-95');
-                chatModal.classList.toggle('opacity-0');
-            }, 10);
-            if (!chatModal.classList.contains('hidden')) chatInput.focus();
-        });
-
-        chatClose.addEventListener('click', () => {
-            chatModal.classList.add('scale-95');
-            chatModal.classList.add('opacity-0');
-            setTimeout(() => chatModal.classList.add('hidden'), 300);
-        });
-
-        suggestionBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const text = btn.textContent;
-                addMessage(text, true);
-                processMessage(text);
-            });
-        });
-
-        function addMessage(text, isUser) {
-            const div = document.createElement('div');
-            div.className = isUser
-                ? 'user-message bg-indigo-600 text-white p-3 rounded-lg rounded-tr-none text-sm ml-auto max-w-[85%] mb-2'
-                : 'bot-message bg-indigo-900/40 text-gray-200 p-3 rounded-lg rounded-tl-none text-sm inline-block max-w-[85%] border border-indigo-500/20 mb-2';
-            div.innerHTML = text;
-            chatWindow.appendChild(div);
-            chatWindow.scrollTop = chatWindow.scrollHeight;
-        }
-
-        function processMessage(msgOriginal) {
-            const msg = msgOriginal.trim().toLowerCase();
-
-            // Simulate typing delay
-            setTimeout(() => {
-                let response = "I'm not sure about that. Try asking about 'Projects', 'Skills', or 'Experience'.";
-
-                // Location / Origin
-                if (msg.includes('where') || msg.includes('from') || msg.includes('live') || msg.includes('location')) {
-                    response = "Gurpreet is from **Punjab, India**. He completed his B.Tech in Computer Science from SBSSTU, Firozpur.";
-                }
-                // Greeting
-                else if (msg.match(/^(hi|hello|hey|greetings)/)) {
-                    response = "Hello! I am Gurpreet's portfolio assistant. I can tell you about his DevOps experience, cloud skills, and key projects like **Deluxe** and **SRA**.";
-                }
-                // Experience / Company
-                else if (msg.includes('experience') || msg.includes('work') || msg.includes('job') || msg.includes('company')) {
-                    response = "Gurpreet is currently a **DevOps Engineer at TestingXperts** (Jan 2022 - Present), working on AWS/GCP automation. Previously, he was a Network Security Trainee at **EH1 Infotech**.";
-                }
-                // Skills
-                else if (msg.includes('skill') || msg.includes('tech') || msg.includes('stack')) {
-                    response = "He is an expert in: <br>• <strong>Cloud</strong>: AWS, Azure, GCP<br>• <strong>IaC</strong>: Terraform, Ansible<br>• <strong>CI/CD</strong>: Jenkins, Harness<br>• <strong>Tools</strong>: Docker, Kubernetes, Python";
-                }
-                // Projects - General
-                else if (msg.includes('project') || msg.includes('portfolio')) {
-                    response = "Key Projects include:<br>1. <strong>Deluxe Corp</strong> (IaC & CI/CD)<br>2. <strong>SRA Azure Migration</strong><br>3. <strong>Net Number</strong> (Repo Migration)<br>4. <strong>IACT</strong> (Terraform Scripts)<br>Ask me about a specific one!";
-                }
-                // Specific Projects
-                else if (msg.includes('deluxe') || msg.includes('dpp')) {
-                    response = "For **Deluxe Corp**, he managed IaC with Terraform, automated deployments via Harness (Blue-Green), and implemented Dynatrace monitoring for zero-downtime releases.";
-                }
-                else if (msg.includes('sra') || msg.includes('solicitor')) {
-                    response = "For **SRA**, he led the Azure Landing Zone migration, optimized cloud costs by upgrading WebApps, and configured Azure Front Door for global security.";
-                }
-                else if (msg.includes('net number') || msg.includes('migration')) {
-                    response = "For **Net Number**, he migrated Git/SVN repos to GitHub using Python/Shell scripts to verify integrity and Ansible to lock legacy repos.";
-                }
-                // Certifications
-                else if (msg.includes('cert') || msg.includes('award') || msg.includes('license')) {
-                    response = "He holds certifications in:<br>• <strong>Harness CI/CD</strong><br>• <strong>Google Cloud Digital Leader</strong><br>• <strong>AWS</strong><br>• <strong>Docker Essentials</strong><br>• <strong>Network Security</strong>";
-                }
-                // Contact
-                else if (msg.includes('contact') || msg.includes('email') || msg.includes('phone')) {
-                    response = "📧 <a href='mailto:preetgur.gsr@gmail.com' class='text-accent underline'>preetgur.gsr@gmail.com</a><br>🔗 <a href='https://linkedin.com/in/ipreetgs' target='_blank' class='text-accent underline'>LinkedIn Profile</a>";
-                }
-                // CV
-                else if (msg.includes('cv') || msg.includes('resume') || msg.includes('download')) {
-                    response = "📄 <a href='GurpreetCV.pdf' download class='text-accent underline'>Click here to download his CV</a> directly.";
-                }
-                // Default fallback helper
-                else {
-                    response = "I didn't quite catch that. Try asking: <em>'What did he do at Deluxe?'</em> or <em>'List his skills'</em>.";
-                }
-
-                addMessage(response, false);
-            }, 600);
-        }
-
-        chatForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const msg = chatInput.value.trim();
-            if (!msg) return;
-
-            addMessage(msg, true);
-            chatInput.value = '';
-            processMessage(msg);
-        });
-    </script>
+    <!-- GSAP for scroll animations (the page still works if it fails to load) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="data.js"></script>
+    <script src="art.js"></script>
+    <script src="sea.js"></script>
+    <script src="app.js"></script>
+    <script src="motion.js"></script>
 </body>
 
 </html>
